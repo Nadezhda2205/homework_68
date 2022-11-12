@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-from accounts.forms import LoginForm
+from django.views.generic import TemplateView, CreateView
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login, logout
+
+from accounts.forms import LoginForm, CustomUserСreationForm
+
 
 
 class LoginView(TemplateView):
@@ -35,6 +37,22 @@ def logout_view(request):
     logout(request)
     return redirect('index')
 
+
 class IndexView(TemplateView):
     template_name = 'accounts/index.html'
     
+
+class RegisterView(CreateView):
+    template_name = 'accounts/signup.html'
+    form_class = CustomUserСreationForm
+    succes_url = '/'
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST, request.FILES)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('index')
+        context = {}
+        context['form'] = form
+        return self.render_to_response(context)
