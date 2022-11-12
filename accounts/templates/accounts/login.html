@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% comment %} {% load static %}  {% endcomment %}
+
+{% block title %}
+    Войти
+{% endblock %}
+
+
+{% block content %} 
+<div class="d-flex justify-content-center">
+    <div class="border border-4 p-5" style="width: 330px;">
+        {% comment %} <img src="{% static 'img/insta.png' %}" alt="instagram" height="55" width="144"> {% endcomment %}
+
+        <div>
+            
+            <form action="" method='POST'>
+                <div class='form'>
+                    {% csrf_token %}
+            
+                    {{form.as_p}}
+            
+                    <input class="btn btn-secondary" type="submit" value="Войти">
+                    {% comment %} <a class="btn btn-secondary" href="{% url 'register' %}">Регистрация</a> {% endcomment %}
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
