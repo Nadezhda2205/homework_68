@@ -41,3 +41,44 @@ class Resume(models.Model):
         verbose_name_plural = 'Резюме'
 
 
+class Experience(models.Model):
+    begin_at = models.DateField()
+    end_at = models.DateField()
+    company = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    duties = models.TextField(verbose_name='Обязанности')
+    resume = models.ForeignKey(
+        Resume, 
+        verbose_name=('Резюме'), 
+        on_delete=models.CASCADE, 
+        related_name='experiences' 
+    )
+    
+    def __str__(self) -> str:
+        return f'{self.resume.author}: {self.company}: {self.position}'
+    
+    class Meta():
+        verbose_name = 'Опыт работы'
+        verbose_name_plural = 'Опыт работы'
+
+
+class Education(models.Model):
+    begin_at = models.DateField()
+    end_at = models.DateField()
+    description = models.TextField()
+    resume = models.ForeignKey(
+        Resume, 
+        verbose_name=('Резюме'), 
+        on_delete=models.CASCADE, 
+        related_name='educations' 
+    )
+    
+    def __str__(self) -> str:
+        return f'{self.resume.author}: Период обучения с {self.begin_at} по {self.end_at}'
+    
+    class Meta():
+        verbose_name = 'Образование'
+        verbose_name_plural = 'Образование'
+
+
+
