@@ -1,5 +1,5 @@
 from django.contrib import admin
-from main.models import VacancyCategory, Resume, Education, Experience
+from main.models import VacancyCategory, Resume, Education, Experience, Vacancy
 
 
 '''Декоратор регистрирует в админ панели модель'''
@@ -22,4 +22,9 @@ class EducationAdmin(admin.ModelAdmin):
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Experience._meta.fields]
+
+
+@admin.register(Vacancy)
+class VacancyAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Vacancy._meta.fields]
 

@@ -25,8 +25,6 @@ class Resume(models.Model):
         verbose_name='Автор',
         to=get_user_model(), 
         related_name='resumes', 
-        null=False, 
-        blank=False,
         on_delete=models.CASCADE
     )
     updated_at = models.DateTimeField(auto_now=True)
@@ -80,5 +78,33 @@ class Education(models.Model):
         verbose_name = 'Образование'
         verbose_name_plural = 'Образование'
 
+
+
+class Vacancy(models.Model):
+    name = models.CharField(max_length=100)
+    salary = models.PositiveIntegerField(verbose_name='Зарплата', null=True)
+    description = models.TextField(null=True)
+    experience_time = models.PositiveIntegerField(null=True, verbose_name='Опыт работы(лет)')
+    vacancy_category = models.ForeignKey(
+        'main.VacancyCategory', 
+        verbose_name=('Категория вакансии'), 
+        on_delete=models.CASCADE, 
+        related_name='vacancies' 
+    )
+    is_public = models.BooleanField()
+    author = models.ForeignKey(
+        verbose_name='Автор',
+        to=get_user_model(), 
+        related_name='vacancies', 
+        on_delete=models.CASCADE
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f'{self.author}: {self.name}'
+    
+    class Meta():
+        verbose_name = 'Вакансия'
+        verbose_name_plural = 'Вакансии'
 
 
