@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DetailView
 
 from main.models import Vacancy
 # from accounts.models import Account
@@ -42,4 +42,10 @@ class VacancyCreateView(CreateView):
         self.object.save()
 
         return super().form_valid(form)
-        
+
+class VacancyDetailView(DetailView):
+    template_name = 'main/detail_vacancy.html'
+    model = Vacancy
+    context_object_name = 'vacancy'
+
+    

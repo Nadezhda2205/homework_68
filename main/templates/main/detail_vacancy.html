@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+
+{% block title %}
+Вакансия
+{% endblock %}
+
+{% block content %}
+
+<div class="card me-5" >
+    <div class="card-body">
+    <h5 class="card-title" style="height: 4rem;">{{vacancy.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Зарплата {{vacancy.salary}} тенге</h6>
+      <p>{{ vacancy.description }}</p>
+      <p> Опыт работы от {{ vacancy.experience_time }} лет</p>
+      <p>{{ vacancy.vacancy_category }}</p>
+      <p>{{ vacancy.updated_at }}</p>
+      <a href="{% url 'account_detail' vacancy.author.username %}" class="card-link">
+        <p class="card-text">{{vacancy.author}} </p>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -21,7 +21,7 @@
     <a href="{% url 'account_detail' vacancy.author.username %}" class="card-link">
       <p class="card-text">{{vacancy.author}} </p>
     </a>
-    <a href="#" class="card-link">Подробнее</a>
+    <a href="{% url 'vacancy_detail' vacancy.pk %}" class="card-link">Подробнее</a>
   </div>
 </div>
 
