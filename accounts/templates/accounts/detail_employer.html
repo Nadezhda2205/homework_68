@@ -8,16 +8,25 @@
 
 {% block content %}
 
-<h2>{{ account.name }}</h2>
-{% if account.photo %}
-  <img src="" alt="">
-{% else %}
-  {% comment %} <img src="{% static 'img/no_p' %}" alt=""> {% endcomment %}
-{% endif %}
+<div class = "row">
+  <div class = "col-md-3 col-sm-6 me-5">
+    {% if account.photo %}
+        <img class="rounded-circle" src="{{ account.photo.url }}" alt="image" height="250" width="250">
+    {% else %}
+        <img class="rounded-circle" src="{% static 'img/no_photo_company.jpg' %}" alt="image" height="400" >
+    {%endif%} 
+  </div>
+  <div class = "col-md-7 col-sm-6">
+    <h3>{{ account.name }}</h3>
+  
+    {% if account.description %}
+      <p>{{ account.description }}</p>
+    {% endif %}
 
-{% if account.description %}
-  <p>{{ account.description }}</p>
-{% endif %}
+  </div>
+</div>
+
+
 
 <h3>Список вакансий</h3>
   <table class="table">
@@ -27,14 +36,12 @@
         <th scope="col">Зарплата</th>
         <th scope="col"></th>
         <th scope="col"></th>
-        {% comment %} <th scope="col"></th> {% endcomment %}
-
       </tr>
     </thead>
     <tbody>
       {% for vacancy in account.vacancies.all %}
         <tr>
-          <td><a href="#">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
+          <td><a href="{% url 'vacancy_detail' vacancy.pk %}">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
           <td>{{ vacancy.salary }} тенге</td>
           <td><a href="#">Редактировать</a></td>
           <td><a href="#">Обновить</a></td>
