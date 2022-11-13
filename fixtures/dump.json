@@ -286,6 +286,58 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-11-13T06:51:27.894Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-11-13T06:53:04.419Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "IT программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-11-13T06:54:26.605Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Оператор колл-центра (удаленно)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-11-13T06:54:32.562Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Тайный проверяющий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -903,10 +955,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "57nf6jaoj74bc0avjw6h0d7vx8hp1yxz",
+  "pk": "cqg28z1gs3jy0ujtmeo3h5d0gvvt9gg8",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1otutr:iYu8OWjIYPv8hMC9CcjPoRuI10jH9nCfn_0GZwZM8m0",
-    "expire_date": "2022-11-26T18:06:39.597Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ou5io:Ck48JnK7tiKeqflsiTBasKFaTozrhwBL0n0hE5GWZm8",
+    "expire_date": "2022-11-27T05:39:58.215Z"
   }
 },
 {
@@ -928,7 +980,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
-    "last_login": "2022-11-12T18:06:39.590Z",
+    "last_login": "2022-11-13T05:39:58.207Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -1074,6 +1126,13 @@
   }
 },
 {
+  "model": "main.vacancycategory",
+  "pk": 7,
+  "fields": {
+    "name": "Программист"
+  }
+},
+{
   "model": "main.resume",
   "pk": 1,
   "fields": {
@@ -1171,9 +1230,9 @@
     "description": "Мы приглашаем Вас принять участие в программе по улучшению качества обслуживания в супермаркетах, банках, магазинах одежды и парфюмерии, автозаправочных станциях и других отраслях (направлениях) сферы услуг.\r\n\r\n*ТРЕБОВАНИЯ К КАНДИДАТАМ:*\r\n\r\n-тактичность, внимательность и ответственность\r\n\r\n-доступ в Интернет\r\n\r\n-наличие диктофона или телефона с функцией звукозаписи\r\n\r\n*УСЛОВИЯ:*\r\n\r\n-Оплата производится без задержек.\r\n\r\n-График работы и оплату вы выбираете сами:\r\n\r\n-5000-8000KZT - неполный рабочий день (2-3 часа)\r\n\r\n-10000 -15000 KZT - рабочий день\r\n\r\n(через день, каждый день, полдня).",
     "experience_time": 3,
     "vacancy_category": 1,
-    "is_public": false,
+    "is_public": true,
     "author": 2,
-    "updated_at": "2022-11-12T19:11:36.884Z"
+    "updated_at": "2022-11-13T06:54:32.560Z"
   }
 },
 {
@@ -1185,9 +1244,23 @@
     "description": "Грамотная устная и письменная речь. Умение и желание много общаться по телефону.\r\n\r\nНавыки работы на компьютере, хорошая скорость печати.\r\n\r\nНаличие компьютера или ноутбука и исправной гарнитуры (наушники с микрофоном).\r\n\r\nСтабильный и быстрый проводной интернет (не менее 2 Мбит/сек).\r\n\r\nУстановленный MS Windows (7 и выше), MS Office и Skype.\r\n\r\nТихое рабочее место, отсутствие отвлекающих факторов. Отсутствие проблем с электричеством.\r\n\r\nОпыт работы и образование — не важны. Мы сами поможем вам стать профессионалом.",
     "experience_time": 7,
     "vacancy_category": 6,
-    "is_public": false,
+    "is_public": true,
     "author": 3,
-    "updated_at": "2022-11-12T19:13:57.765Z"
+    "updated_at": "2022-11-13T06:54:26.603Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 3,
+  "fields": {
+    "name": "IT программист",
+    "salary": 47,
+    "description": "владеете базовыми технологиями, знаете JS и css html php\r\nимеете опыт разработки продуктов;\r\nответственны и проактивны, умеете работать в команде и самостоятельно восполнять недостающие навыки и знания;\r\nувлекаетесь новыми технологиями во фронтенде;\r\nбудет преимуществом, если у вас есть опыт настройки окружения, написания тестов и выбора библиотек.\r\nпервое время будет много задач по верстке, также будут задачи на написание бизнес-логики;\r\nписать стабильный, поддерживаемый код, который решает задачи бизнеса;\r\nучаствовать в Code review;\r\nвместе с командой проектировать архитектуру приложений и выбирать технологии;\r\nвзаимодействовать с командами разработки.\r\nСреднее или Высшее законченное техническое образование.\r\n\r\nРассматриваем без опыта работы.\r\n\r\nНаличие сертификатов (приветствуется).\r\n\r\nУмение находить общий язык\r\n\r\nЖелание работать и зарабатывать\r\n\r\nСоставление графиков работы",
+    "experience_time": 3,
+    "vacancy_category": 7,
+    "is_public": true,
+    "author": 3,
+    "updated_at": "2022-11-13T06:53:04.124Z"
   }
 },
 {

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+<div class="row row-cols-3 row-cols-md-1 g-4">
+
+{% for vacancy in vacancies %}
+
+
+<div class="card me-5" style="width: 18rem;">
+    <div class="card-body">
+        <a href="#" class="card-link">
+            <h5 class="card-title" style="height: 4rem;">{{vacancy.name}}</h5>
+        </a>
+      <h6 class="card-subtitle mb-2 text-muted">{{vacancy.salary}} тенге</h6>
+      <p class="card-text">{{vacancy.author}} </p>
+      <a href="#" class="card-link">Подробнее</a>
+    </div>
+  </div>
+
+
+
+  {% endfor %}
+
+{% endblock %}
