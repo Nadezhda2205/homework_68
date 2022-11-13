@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Страница работодателя 
+{% endblock %}
+
+
+{% block content %}
+
+<h2>{{ account.name }}</h2>
+{% if account.photo %}
+  <img src="" alt="">
+{% else %}
+  {% comment %} <img src="{% static 'img/no_p' %}" alt=""> {% endcomment %}
+{% endif %}
+
+{% if account.description %}
+  <p>{{ account.description }}</p>
+{% endif %}
+
+<h3>Список вакансий</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Вакансия</th>
+        <th scope="col">Зарплата</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        {% comment %} <th scope="col"></th> {% endcomment %}
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for vacancy in account.vacancies.all %}
+        <tr>
+          <td><a href="#">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
+          <td>{{ vacancy.salary }} тенге</td>
+          <td><a href="#">Редактировать</a></td>
+          <td><a href="#">Обновить</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
