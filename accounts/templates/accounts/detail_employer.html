@@ -41,7 +41,7 @@
     <tbody>
       {% for vacancy in account.vacancies.all %}
         <tr>
-          <td><a href="#">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
+          <td><a href="{% url 'vacancy_detail' vacancy.pk %}">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
           <td>{{ vacancy.salary }} тенге</td>
           <td><a href="#">Редактировать</a></td>
           <td><a href="#">Обновить</a></td>
