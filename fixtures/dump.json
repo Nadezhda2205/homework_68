@@ -234,6 +234,58 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-11-13T05:14:27.391Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "hope: hope: Тайный проверяющий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-11-13T05:14:34.771Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "hope2: hope2: Оператор колл-центра (удаленно)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-11-13T05:15:04.845Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "hope: 2022-11-13 05:15:04.845839+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-11-13T05:16:09.017Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "hope3: 2022-11-13 05:16:09.017780+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -666,6 +718,78 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add message",
+    "content_type": 13,
+    "codename": "add_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change message",
+    "content_type": 13,
+    "codename": "change_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete message",
+    "content_type": 13,
+    "codename": "delete_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view message",
+    "content_type": 13,
+    "codename": "view_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add response",
+    "content_type": 14,
+    "codename": "add_response"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change response",
+    "content_type": 14,
+    "codename": "change_response"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete response",
+    "content_type": 14,
+    "codename": "delete_response"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view response",
+    "content_type": 14,
+    "codename": "view_response"
+  }
+},
+{
   "model": "contenttypes.contenttype",
   "pk": 1,
   "fields": {
@@ -759,6 +883,22 @@
   "fields": {
     "app_label": "main",
     "model": "vacancy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "main",
+    "model": "message"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "main",
+    "model": "response"
   }
 },
 {
@@ -1048,6 +1188,44 @@
     "is_public": false,
     "author": 3,
     "updated_at": "2022-11-12T19:13:57.765Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 1,
+  "fields": {
+    "vacancy": 1,
+    "applicant": 2,
+    "resume": 1
+  }
+},
+{
+  "model": "main.response",
+  "pk": 2,
+  "fields": {
+    "vacancy": 2,
+    "applicant": 3,
+    "resume": 2
+  }
+},
+{
+  "model": "main.message",
+  "pk": 1,
+  "fields": {
+    "response": 1,
+    "author": 2,
+    "text": "Хочу работать у вас",
+    "created_at": "2022-11-13T05:15:04.845Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 2,
+  "fields": {
+    "response": 2,
+    "author": 4,
+    "text": "мне понравились ваши условия, предложенные вами",
+    "created_at": "2022-11-13T05:16:09.017Z"
   }
 }
 ]

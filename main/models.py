@@ -101,10 +101,62 @@ class Vacancy(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
-        return f'{self.author}: {self.name}'
+        return self.name
     
     class Meta():
         verbose_name = 'Вакансия'
         verbose_name_plural = 'Вакансии'
+
+
+class Response(models.Model):
+    vacancy = models.ForeignKey(
+        'main.Vacancy', 
+        verbose_name=('Вакансия'), 
+        on_delete=models.CASCADE, 
+        related_name='responses' 
+    )
+    applicant = models.ForeignKey(
+        'accounts.Account', 
+        verbose_name=('Соискатель'), 
+        on_delete=models.CASCADE, 
+        related_name='responses' 
+    )
+    resume = models.ForeignKey(
+        'main.Resume', 
+        verbose_name=('Резюме'), 
+        on_delete=models.CASCADE, 
+        related_name='responses' 
+    )
+    def __str__(self) -> str:
+        return f'Отклик на {self.vacancy}'
+    
+    class Meta():
+        verbose_name = 'Отклик'
+        verbose_name_plural = 'Отклики'
+
+
+    
+class Message(models.Model):
+    response = models.ForeignKey(
+        'main.Response', 
+        verbose_name=('На отклик'), 
+        on_delete=models.CASCADE, 
+        related_name='messages' 
+    )
+    author = models.ForeignKey(
+        to=get_user_model(), 
+        verbose_name='Автор',
+        related_name='messages', 
+        on_delete=models.CASCADE
+    )
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return f'{self.author}: {self.created_at}'
+    
+    class Meta():
+        verbose_name = 'Сообщение'
+        verbose_name_plural = 'Сообщения'
 
 
