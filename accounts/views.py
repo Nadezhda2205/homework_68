@@ -36,10 +36,6 @@ class LoginView(TemplateView):
 def logout_view(request):
     logout(request)
     return redirect('index')
-
-
-class IndexView(TemplateView):
-    template_name = 'accounts/index.html'
     
 
 class RegisterView(CreateView):

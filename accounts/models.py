@@ -33,4 +33,7 @@ class Account(AbstractUser):
     class Meta:
         verbose_name = 'Профиль'
         verbose_name_plural = 'Профили'
+    
+    def __str__(self) -> str:
+        return self.name
 
