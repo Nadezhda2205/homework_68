@@ -1,971 +1,17 @@
 [
 {
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2022-11-12T14:21:29.516Z",
-    "user": 1,
-    "content_type": 6,
-    "object_id": "1",
-    "object_repr": "Role object (1)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2022-11-12T14:21:37.669Z",
-    "user": 1,
-    "content_type": 6,
-    "object_id": "2",
-    "object_repr": "Role object (2)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2022-11-12T18:08:23.247Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "VacancyCategory object (1)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 4,
-  "fields": {
-    "action_time": "2022-11-12T18:08:37.224Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "2",
-    "object_repr": "VacancyCategory object (2)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 5,
-  "fields": {
-    "action_time": "2022-11-12T18:08:46.780Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "3",
-    "object_repr": "VacancyCategory object (3)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 6,
-  "fields": {
-    "action_time": "2022-11-12T18:08:55.921Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "4",
-    "object_repr": "VacancyCategory object (4)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 7,
-  "fields": {
-    "action_time": "2022-11-12T18:09:16.547Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "5",
-    "object_repr": "VacancyCategory object (5)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 8,
-  "fields": {
-    "action_time": "2022-11-12T18:16:33.025Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "hope: Инспектор по взысканию",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 9,
-  "fields": {
-    "action_time": "2022-11-12T18:16:45.543Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "2",
-    "object_repr": "hope3: Финансовый менеджер",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 10,
-  "fields": {
-    "action_time": "2022-11-12T18:16:58.573Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "3",
-    "object_repr": "hope2: Инженер ПТО",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 11,
-  "fields": {
-    "action_time": "2022-11-12T18:38:10.872Z",
-    "user": 1,
-    "content_type": 11,
-    "object_id": "1",
-    "object_repr": "hope: Период обучения с 2021-10-04 по 2022-08-17",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 12,
-  "fields": {
-    "action_time": "2022-11-12T18:38:52.459Z",
-    "user": 1,
-    "content_type": 11,
-    "object_id": "2",
-    "object_repr": "hope3: Период обучения с 2020-07-05 по 2021-08-25",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 13,
-  "fields": {
-    "action_time": "2022-11-12T18:42:49.363Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "hope: Crystal Spring, Алматы: Стажер-разработчик React",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 14,
-  "fields": {
-    "action_time": "2022-11-12T18:44:06.202Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "2",
-    "object_repr": "hope3: UNISTORY LLC: Junior Frontend разработчик",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 15,
-  "fields": {
-    "action_time": "2022-11-12T18:45:00.585Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "3",
-    "object_repr": "hope2: ТОО UCO: Front-end Developer",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 16,
-  "fields": {
-    "action_time": "2022-11-12T19:11:36.885Z",
-    "user": 1,
-    "content_type": 12,
-    "object_id": "1",
-    "object_repr": "hope: Тайный проверяющий",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 17,
-  "fields": {
-    "action_time": "2022-11-12T19:13:50.329Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "6",
-    "object_repr": "Оператор колл-центра",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 18,
-  "fields": {
-    "action_time": "2022-11-12T19:13:57.767Z",
-    "user": 1,
-    "content_type": 12,
-    "object_id": "2",
-    "object_repr": "hope2: Оператор колл-центра (удаленно)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 19,
-  "fields": {
-    "action_time": "2022-11-13T05:14:27.391Z",
-    "user": 1,
-    "content_type": 14,
-    "object_id": "1",
-    "object_repr": "hope: hope: Тайный проверяющий",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 20,
-  "fields": {
-    "action_time": "2022-11-13T05:14:34.771Z",
-    "user": 1,
-    "content_type": 14,
-    "object_id": "2",
-    "object_repr": "hope2: hope2: Оператор колл-центра (удаленно)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 21,
-  "fields": {
-    "action_time": "2022-11-13T05:15:04.845Z",
-    "user": 1,
-    "content_type": 13,
-    "object_id": "1",
-    "object_repr": "hope: 2022-11-13 05:15:04.845839+00:00",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 22,
-  "fields": {
-    "action_time": "2022-11-13T05:16:09.017Z",
-    "user": 1,
-    "content_type": 13,
-    "object_id": "2",
-    "object_repr": "hope3: 2022-11-13 05:16:09.017780+00:00",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 23,
-  "fields": {
-    "action_time": "2022-11-13T06:51:27.894Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "7",
-    "object_repr": "Программист",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 24,
-  "fields": {
-    "action_time": "2022-11-13T06:53:04.419Z",
-    "user": 1,
-    "content_type": 12,
-    "object_id": "3",
-    "object_repr": "IT программист",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 25,
-  "fields": {
-    "action_time": "2022-11-13T06:54:26.605Z",
-    "user": 1,
-    "content_type": 12,
-    "object_id": "2",
-    "object_repr": "Оператор колл-центра (удаленно)",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 26,
-  "fields": {
-    "action_time": "2022-11-13T06:54:32.562Z",
-    "user": 1,
-    "content_type": 12,
-    "object_id": "1",
-    "object_repr": "Тайный проверяющий",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 4,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 4,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 4,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 4,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 5,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 5,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 5,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 5,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add role",
-    "content_type": 6,
-    "codename": "add_role"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change role",
-    "content_type": 6,
-    "codename": "change_role"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete role",
-    "content_type": 6,
-    "codename": "delete_role"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view role",
-    "content_type": 6,
-    "codename": "view_role"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add Профиль",
-    "content_type": 7,
-    "codename": "add_account"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change Профиль",
-    "content_type": 7,
-    "codename": "change_account"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete Профиль",
-    "content_type": 7,
-    "codename": "delete_account"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view Профиль",
-    "content_type": 7,
-    "codename": "view_account"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add vacancy category",
-    "content_type": 8,
-    "codename": "add_vacancycategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change vacancy category",
-    "content_type": 8,
-    "codename": "change_vacancycategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete vacancy category",
-    "content_type": 8,
-    "codename": "delete_vacancycategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view vacancy category",
-    "content_type": 8,
-    "codename": "view_vacancycategory"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add resume",
-    "content_type": 9,
-    "codename": "add_resume"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change resume",
-    "content_type": 9,
-    "codename": "change_resume"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete resume",
-    "content_type": 9,
-    "codename": "delete_resume"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view resume",
-    "content_type": 9,
-    "codename": "view_resume"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add Опыт работы",
-    "content_type": 10,
-    "codename": "add_experience"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change Опыт работы",
-    "content_type": 10,
-    "codename": "change_experience"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete Опыт работы",
-    "content_type": 10,
-    "codename": "delete_experience"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view Опыт работы",
-    "content_type": 10,
-    "codename": "view_experience"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 41,
-  "fields": {
-    "name": "Can add Образование",
-    "content_type": 11,
-    "codename": "add_education"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 42,
-  "fields": {
-    "name": "Can change Образование",
-    "content_type": 11,
-    "codename": "change_education"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 43,
-  "fields": {
-    "name": "Can delete Образование",
-    "content_type": 11,
-    "codename": "delete_education"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 44,
-  "fields": {
-    "name": "Can view Образование",
-    "content_type": 11,
-    "codename": "view_education"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 45,
-  "fields": {
-    "name": "Can add Вакансия",
-    "content_type": 12,
-    "codename": "add_vacancy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 46,
-  "fields": {
-    "name": "Can change Вакансия",
-    "content_type": 12,
-    "codename": "change_vacancy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 47,
-  "fields": {
-    "name": "Can delete Вакансия",
-    "content_type": 12,
-    "codename": "delete_vacancy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 48,
-  "fields": {
-    "name": "Can view Вакансия",
-    "content_type": 12,
-    "codename": "view_vacancy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 49,
-  "fields": {
-    "name": "Can add message",
-    "content_type": 13,
-    "codename": "add_message"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 50,
-  "fields": {
-    "name": "Can change message",
-    "content_type": 13,
-    "codename": "change_message"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 51,
-  "fields": {
-    "name": "Can delete message",
-    "content_type": 13,
-    "codename": "delete_message"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 52,
-  "fields": {
-    "name": "Can view message",
-    "content_type": 13,
-    "codename": "view_message"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 53,
-  "fields": {
-    "name": "Can add response",
-    "content_type": 14,
-    "codename": "add_response"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 54,
-  "fields": {
-    "name": "Can change response",
-    "content_type": 14,
-    "codename": "change_response"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 55,
-  "fields": {
-    "name": "Can delete response",
-    "content_type": 14,
-    "codename": "delete_response"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 56,
-  "fields": {
-    "name": "Can view response",
-    "content_type": 14,
-    "codename": "view_response"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "accounts",
-    "model": "role"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "accounts",
-    "model": "account"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "main",
-    "model": "vacancycategory"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "main",
-    "model": "resume"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "main",
-    "model": "experience"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "main",
-    "model": "education"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "main",
-    "model": "vacancy"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 13,
-  "fields": {
-    "app_label": "main",
-    "model": "message"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 14,
-  "fields": {
-    "app_label": "main",
-    "model": "response"
-  }
-},
-{
   "model": "sessions.session",
-  "pk": "cqg28z1gs3jy0ujtmeo3h5d0gvvt9gg8",
+  "pk": "s6oflfa7hmukqbyb3xe6uny6yv5b61u7",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ou5io:Ck48JnK7tiKeqflsiTBasKFaTozrhwBL0n0hE5GWZm8",
-    "expire_date": "2022-11-27T05:39:58.215Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ouCsZ:eidTUW9OqrxUEFmPRfuiteEkTsvbPf2OOtEHI9xJeUw",
+    "expire_date": "2022-11-27T13:18:31.904Z"
   }
 },
 {
   "model": "accounts.role",
   "pk": 1,
   "fields": {
-    "name": "работадатель"
+    "name": "работодатель"
   }
 },
 {
@@ -977,10 +23,9 @@
 },
 {
   "model": "accounts.account",
-  "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
-    "last_login": "2022-11-13T05:39:58.207Z",
+    "last_login": "2022-11-13T13:18:31.897Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -998,13 +43,13 @@
     "facebook": null,
     "linkedin": null,
     "sex": null,
+    "description": null,
     "groups": [],
     "user_permissions": []
   }
 },
 {
   "model": "accounts.account",
-  "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$390000$XUhGiXN21IFH5QnKwyMQwD$RFICCwV0XK932N24KrE3jGXJUAFlRmHzETyw5YFuQgs=",
     "last_login": "2022-11-12T16:29:01.501Z",
@@ -1025,16 +70,16 @@
     "facebook": null,
     "linkedin": null,
     "sex": null,
+    "description": null,
     "groups": [],
     "user_permissions": []
   }
 },
 {
   "model": "accounts.account",
-  "pk": 3,
   "fields": {
     "password": "pbkdf2_sha256$390000$Wzf5649BzTOKhVOGhDIUFC$8zI5ARwnL8VY9R1WeRrKa4+QEg8fKGU+cBW82B78mLo=",
-    "last_login": "2022-11-12T16:31:38.902Z",
+    "last_login": "2022-11-12T16:31:38Z",
     "is_superuser": false,
     "username": "hope2",
     "first_name": "",
@@ -1042,7 +87,7 @@
     "email": "sss@mail.ru",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2022-11-12T16:31:38.465Z",
+    "date_joined": "2022-11-12T16:31:38Z",
     "name": "ИП Вася",
     "role": 1,
     "phone": "+7(777)556-74-18",
@@ -1052,13 +97,13 @@
     "facebook": null,
     "linkedin": null,
     "sex": null,
+    "description": "Добрый день, уважаемый соискатель! Наша группа компаний Iceberg существует уже более 10 лет и имеет множество диверсифицированных направлений. Мы занимаемся проектами в самых различных областях - это обслуживание разнообразной техники и аппаратуры, разработка софта, различных приложений и ресурсов, утилизация по государственному регламенту, образовательные курсы, а также химчистка и множество других направлений.\r\n\r\nНаши филиалы находимся в трех самых крупных городах Казахстана - Алматы, Нур-Султан, Шымкент. А наша дружная команда составляет уже более 100 самых сильных специалистов в своих областях. Мы на постоянной основе работаем над перспективными проектами, часть из которых не имеет альтернативы на территории СНГ.\r\n\r\nОсновными качествами, которые мы требуем от наших сотрудников - это честность и ответственность. Мы не те, кто ищет готовых и устоявшихся специалистов! Всегда готовы взять на обучение, поддержать перспективных и энергичных, начинающих специалистов. Мы за все ваши начинания и желание к саморазвитию, работе, изучению основ и навыков вашей профессиональной деятельности.\r\n\r\nОбещаем конкурентную заработную плату и большие перспективы роста для активных участников нашей большой семьи. С уважением компания Iceberg!",
     "groups": [],
     "user_permissions": []
   }
 },
 {
   "model": "accounts.account",
-  "pk": 4,
   "fields": {
     "password": "pbkdf2_sha256$390000$fICDtA4hP0jhSJIEHOuOjy$ZpRdlmnoI0O4Yy86k9z0/x7XeSSpItN9tZwMaXo7vBA=",
     "last_login": "2022-11-12T16:48:54.480Z",
@@ -1079,6 +124,7 @@
     "facebook": null,
     "linkedin": null,
     "sex": null,
+    "description": null,
     "groups": [],
     "user_permissions": []
   }
@@ -1138,7 +184,9 @@
   "fields": {
     "vacancy_category": 1,
     "salary": 50,
-    "author": 2,
+    "author": [
+      "hope"
+    ],
     "updated_at": "2022-11-12T18:16:33.022Z",
     "is_public": false
   }
@@ -1149,7 +197,9 @@
   "fields": {
     "vacancy_category": 2,
     "salary": 28,
-    "author": 4,
+    "author": [
+      "hope3"
+    ],
     "updated_at": "2022-11-12T18:16:45.542Z",
     "is_public": false
   }
@@ -1160,7 +210,9 @@
   "fields": {
     "vacancy_category": 4,
     "salary": 26,
-    "author": 3,
+    "author": [
+      "hope2"
+    ],
     "updated_at": "2022-11-12T18:16:58.572Z",
     "is_public": false
   }
@@ -1231,7 +283,9 @@
     "experience_time": 3,
     "vacancy_category": 1,
     "is_public": true,
-    "author": 2,
+    "author": [
+      "hope"
+    ],
     "updated_at": "2022-11-13T06:54:32.560Z"
   }
 },
@@ -1245,7 +299,9 @@
     "experience_time": 7,
     "vacancy_category": 6,
     "is_public": true,
-    "author": 3,
+    "author": [
+      "hope2"
+    ],
     "updated_at": "2022-11-13T06:54:26.603Z"
   }
 },
@@ -1259,7 +315,9 @@
     "experience_time": 3,
     "vacancy_category": 7,
     "is_public": true,
-    "author": 3,
+    "author": [
+      "hope2"
+    ],
     "updated_at": "2022-11-13T06:53:04.124Z"
   }
 },
@@ -1268,7 +326,9 @@
   "pk": 1,
   "fields": {
     "vacancy": 1,
-    "applicant": 2,
+    "applicant": [
+      "hope"
+    ],
     "resume": 1
   }
 },
@@ -1277,7 +337,9 @@
   "pk": 2,
   "fields": {
     "vacancy": 2,
-    "applicant": 3,
+    "applicant": [
+      "hope2"
+    ],
     "resume": 2
   }
 },
@@ -1286,7 +348,9 @@
   "pk": 1,
   "fields": {
     "response": 1,
-    "author": 2,
+    "author": [
+      "hope"
+    ],
     "text": "Хочу работать у вас",
     "created_at": "2022-11-13T05:15:04.845Z"
   }
@@ -1296,9 +360,515 @@
   "pk": 2,
   "fields": {
     "response": 2,
-    "author": 4,
+    "author": [
+      "hope3"
+    ],
     "text": "мне понравились ваши условия, предложенные вами",
     "created_at": "2022-11-13T05:16:09.017Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-11-12T14:21:29.516Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "1",
+    "object_repr": "Role object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-11-12T14:21:37.669Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "2",
+    "object_repr": "Role object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-11-12T18:08:23.247Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "1",
+    "object_repr": "VacancyCategory object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-11-12T18:08:37.224Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "2",
+    "object_repr": "VacancyCategory object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-11-12T18:08:46.780Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "3",
+    "object_repr": "VacancyCategory object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-11-12T18:08:55.921Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "4",
+    "object_repr": "VacancyCategory object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-11-12T18:09:16.547Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "5",
+    "object_repr": "VacancyCategory object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-11-12T18:16:33.025Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Инспектор по взысканию",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-11-12T18:16:45.543Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: Финансовый менеджер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-11-12T18:16:58.573Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "3",
+    "object_repr": "hope2: Инженер ПТО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-11-12T18:38:10.872Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Период обучения с 2021-10-04 по 2022-08-17",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-11-12T18:38:52.459Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: Период обучения с 2020-07-05 по 2021-08-25",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-11-12T18:42:49.363Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Crystal Spring, Алматы: Стажер-разработчик React",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-11-12T18:44:06.202Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: UNISTORY LLC: Junior Frontend разработчик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-11-12T18:45:00.585Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "3",
+    "object_repr": "hope2: ТОО UCO: Front-end Developer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-11-12T19:11:36.885Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Тайный проверяющий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-11-12T19:13:50.329Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "6",
+    "object_repr": "Оператор колл-центра",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-11-12T19:13:57.767Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "2",
+    "object_repr": "hope2: Оператор колл-центра (удаленно)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-11-13T05:14:27.391Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: hope: Тайный проверяющий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-11-13T05:14:34.771Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "2",
+    "object_repr": "hope2: hope2: Оператор колл-центра (удаленно)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-11-13T05:15:04.845Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "message"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: 2022-11-13 05:15:04.845839+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-11-13T05:16:09.017Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "message"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: 2022-11-13 05:16:09.017780+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-11-13T06:51:27.894Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "7",
+    "object_repr": "Программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-11-13T06:53:04.419Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "3",
+    "object_repr": "IT программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-11-13T06:54:26.605Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "2",
+    "object_repr": "Оператор колл-центра (удаленно)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-11-13T06:54:32.562Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "1",
+    "object_repr": "Тайный проверяющий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-11-13T13:18:48.567Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "1",
+    "object_repr": "работодатель",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-11-13T14:44:30.272Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "ИП Вася",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
   }
 }
 ]

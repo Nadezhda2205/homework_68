@@ -18,9 +18,9 @@ class Account(AbstractUser):
     phone = models.CharField(max_length=20, verbose_name='Телефон')
     photo = models.ImageField(upload_to='photo', verbose_name='Фото', null=True, blank=True)
     birthday = models.DateField(null=True, blank=True, verbose_name='Дата рождения')
-    telegram = models.CharField(max_length=50, null=True)
-    facebook = models.CharField(max_length=50, null=True)
-    linkedin = models.CharField(max_length=50, null=True)
+    telegram = models.CharField(max_length=50, null=True, blank=True)
+    facebook = models.CharField(max_length=50, null=True, blank=True)
+    linkedin = models.CharField(max_length=50, null=True, blank=True)
 
     sex = models.CharField(
         choices=SEX_CHOICES,
@@ -29,6 +29,7 @@ class Account(AbstractUser):
         verbose_name='Пол',
         max_length=1
     )
+    description = models.TextField(null=True)
 
     class Meta:
         verbose_name = 'Профиль'

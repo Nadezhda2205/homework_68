@@ -13,15 +13,17 @@
 
 
 <div class="card me-5" style="width: 18rem;">
-    <div class="card-body">
-        <a href="#" class="card-link">
-            <h5 class="card-title" style="height: 4rem;">{{vacancy.name}}</h5>
-        </a>
-      <h6 class="card-subtitle mb-2 text-muted">{{vacancy.salary}} тенге</h6>
+  <div class="card-body">
+    <a href="#" class="card-link">
+      <h5 class="card-title" style="height: 4rem;">{{vacancy.name}}</h5>
+    </a>
+    <h6 class="card-subtitle mb-2 text-muted">{{vacancy.salary}} тенге</h6>
+    <a href="{% url 'account_detail' vacancy.author.username %}" class="card-link">
       <p class="card-text">{{vacancy.author}} </p>
-      <a href="#" class="card-link">Подробнее</a>
-    </div>
+    </a>
+    <a href="#" class="card-link">Подробнее</a>
   </div>
+</div>
 
 
 
