@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 
 from main.models import Vacancy
 # from accounts.models import Account
@@ -23,3 +23,23 @@ class VacancyListView(ListView):
     #         return context
     #     user: Account
 
+class VacancyCreateView(CreateView):
+    template_name = 'main/create_vacancy.html'
+    model = Vacancy
+    fields = [
+        'name', 
+        'salary', 
+        'description', 
+        'experience_time',
+        'vacancy_category',
+        'is_public'
+        ]
+    success_url = '/'
+
+    def form_valid(self, form):
+        self.object: Vacancy = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+
+        return super().form_valid(form)
+        
