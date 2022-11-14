@@ -1,10 +1,10 @@
 [
 {
   "model": "sessions.session",
-  "pk": "wnpdkc5uc4vahlhl5qmepj2kzc3eay6s",
+  "pk": "s1rnhm0mgzu3j4zcan8z7uveuu0b3pb4",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ouTxz:nDCGvP5RBtbifCL1qEImFUiiXR7YrvMAMidYk7zetqc",
-    "expire_date": "2022-11-28T07:33:15.595Z"
+    "session_data": ".eJxVjMsOwiAQRf-FtSEDDAgu3fsNZHhJ1UBS2pXx322TLnR7zzn3zTytS_XryLOfErswzU6_W6D4zG0H6UHt3nnsbZmnwHeFH3TwW0_5dT3cv4NKo261KuTISqNRkU4W0UaRIxRtTA7WgSwaghKYN-IEGpegFEgI4iytUJF9vs6qNug:1ouXAI:3lkK6pk3mRSpb9sjTBHjdZUkDg0qoJp3HThQs_7_9Sk",
+    "expire_date": "2022-11-28T10:58:10.619Z"
   }
 },
 {
@@ -25,7 +25,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
-    "last_login": "2022-11-14T07:33:15.590Z",
+    "last_login": "2022-11-14T10:56:52.093Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -133,7 +133,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$mVvz924GsYG8VXiadPwkpH$DOWeH0sjMUJrfZkNYtBAQDUfZKq9klL/zNHCgZMpI98=",
-    "last_login": "2022-11-13T18:01:50Z",
+    "last_login": "2022-11-14T10:58:10.613Z",
     "is_superuser": false,
     "username": "rebbit",
     "first_name": "",
@@ -379,16 +379,16 @@
   "model": "main.vacancy",
   "pk": 4,
   "fields": {
-    "name": "Торговый представитель / Мерчендайзер",
-    "salary": 500000,
+    "name": "Торговый представитель",
+    "salary": 200000,
     "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
-    "experience_time": 4,
+    "experience_time": 2,
     "vacancy_category": 3,
     "is_public": true,
     "author": [
       "rebbit"
     ],
-    "updated_at": "2022-11-13T18:02:47.594Z"
+    "updated_at": "2022-11-14T10:58:26.530Z"
   }
 },
 {
@@ -396,7 +396,7 @@
   "pk": 5,
   "fields": {
     "name": "Торговый представитель / Мерчендайзер",
-    "salary": 500000,
+    "salary": 300000,
     "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
     "experience_time": 4,
     "vacancy_category": 3,
@@ -404,7 +404,7 @@
     "author": [
       "rebbit"
     ],
-    "updated_at": "2022-11-13T18:02:26.881Z"
+    "updated_at": "2022-11-14T10:21:54.848Z"
   }
 },
 {

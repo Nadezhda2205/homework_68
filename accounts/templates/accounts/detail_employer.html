@@ -43,7 +43,7 @@
         <tr>
           <td><a href="{% url 'vacancy_detail' vacancy.pk %}">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
           <td>{{ vacancy.salary }} тенге</td>
-          <td><a href="#">Редактировать</a></td>
+          <td><a href="{% url 'vacancy_update' vacancy.pk %}">Редактировать</a></td>
           <td><a href="#">Обновить</a></td>
         </tr>
       {% endfor %}
