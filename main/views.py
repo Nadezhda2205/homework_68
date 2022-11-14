@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, DetailView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView
+from django.urls import reverse 
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from main.models import Vacancy
 # from accounts.models import Account
@@ -49,3 +51,23 @@ class VacancyDetailView(DetailView):
     context_object_name = 'vacancy'
 
     
+class VacancyUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = 'main/update_vacancy.html'
+    model = Vacancy
+    fields = [
+        'name', 
+        'salary', 
+        'description', 
+        'experience_time',
+        'vacancy_category',
+        'is_public'
+        ]
+    context_object_name = 'vacancy'
+    
+    def get_success_url(self):
+        return reverse('vacancy_detail', kwargs={'pk': self.object.pk})
+
+    def dispatch(self, request, *args, **kwargs):
+        if not self.get_object().author == request.user:
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
