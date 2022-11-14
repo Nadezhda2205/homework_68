@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, CreateView, DetailView, UpdateView
 from django.urls import reverse 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
 from main.models import Vacancy
 # from accounts.models import Account
@@ -71,3 +73,13 @@ class VacancyUpdateView(LoginRequiredMixin, UpdateView):
         if not self.get_object().author == request.user:
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
+
+
+@login_required
+def VacancyDateUpdateView(request, pk):
+    vacancy = get_object_or_404(Vacancy, pk=pk)
+    if not request.user == vacancy.author:
+        return HttpResponseForbidden()
+    vacancy.save()
+    return redirect('account_detail', vacancy.author.username)
+    
