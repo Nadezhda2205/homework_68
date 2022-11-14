@@ -1,10 +1,10 @@
 [
 {
   "model": "sessions.session",
-  "pk": "xxgfuhp5p038b3oo6ser0nuvsqy1o1uo",
+  "pk": "wnpdkc5uc4vahlhl5qmepj2kzc3eay6s",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ouHJ6:rbEOj0W5qs4k-G9eJOJKNpjRPmB6rd6IjXgoXfT40Qg",
-    "expire_date": "2022-11-27T18:02:12.559Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ouTxz:nDCGvP5RBtbifCL1qEImFUiiXR7YrvMAMidYk7zetqc",
+    "expire_date": "2022-11-28T07:33:15.595Z"
   }
 },
 {
@@ -25,7 +25,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
-    "last_login": "2022-11-13T18:02:12.551Z",
+    "last_login": "2022-11-14T07:33:15.590Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -33,17 +33,17 @@
     "email": "",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2022-11-12T14:17:51.054Z",
-    "name": "",
-    "role": null,
+    "date_joined": "2022-11-12T14:17:51Z",
+    "name": "root",
+    "role": 1,
     "phone": "1",
-    "photo": "",
+    "photo": "photo/img_root.jpg",
     "birthday": null,
     "telegram": null,
     "facebook": null,
     "linkedin": null,
     "sex": null,
-    "description": null,
+    "description": "",
     "groups": [],
     "user_permissions": []
   }
@@ -52,7 +52,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$XUhGiXN21IFH5QnKwyMQwD$RFICCwV0XK932N24KrE3jGXJUAFlRmHzETyw5YFuQgs=",
-    "last_login": "2022-11-12T16:29:01.501Z",
+    "last_login": "2022-11-14T07:21:07.544Z",
     "is_superuser": false,
     "username": "hope",
     "first_name": "",
@@ -60,17 +60,17 @@
     "email": "qqq@mail.ru",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2022-11-12T16:29:01.183Z",
+    "date_joined": "2022-11-12T16:29:01Z",
     "name": "Надежда",
     "role": 2,
     "phone": "+7(777)556-74-18",
-    "photo": "",
+    "photo": "photo/logo_2_sZmq43c.jpg",
     "birthday": null,
     "telegram": null,
     "facebook": null,
     "linkedin": null,
     "sex": null,
-    "description": null,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность\r\nПлюсы для вас:\r\n\r\nДостойный оклад + бонусы по результатам выполнения KPI;\r\nВозможности профессионального и карьерного роста;\r\nПолное соответствие ТК РК;\r\nМедицинская страховка;\r\nКомпенсация затрат на мобильную связь.",
     "groups": [],
     "user_permissions": []
   }
@@ -79,7 +79,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$Wzf5649BzTOKhVOGhDIUFC$8zI5ARwnL8VY9R1WeRrKa4+QEg8fKGU+cBW82B78mLo=",
-    "last_login": "2022-11-12T16:31:38Z",
+    "last_login": "2022-11-14T07:22:55.693Z",
     "is_superuser": false,
     "username": "hope2",
     "first_name": "",
@@ -106,7 +106,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$fICDtA4hP0jhSJIEHOuOjy$ZpRdlmnoI0O4Yy86k9z0/x7XeSSpItN9tZwMaXo7vBA=",
-    "last_login": "2022-11-12T16:48:54.480Z",
+    "last_login": "2022-11-12T16:48:54Z",
     "is_superuser": false,
     "username": "hope3",
     "first_name": "",
@@ -114,7 +114,7 @@
     "email": "qqq@mail.ru",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2022-11-12T16:48:53.936Z",
+    "date_joined": "2022-11-12T16:48:53Z",
     "name": "ИП Надежда",
     "role": 1,
     "phone": "+7(777)556-74-18",
@@ -124,7 +124,7 @@
     "facebook": null,
     "linkedin": null,
     "sex": null,
-    "description": null,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность\r\nПлюсы для вас:\r\n\r\nДостойный оклад + бонусы по результатам выполнения KPI;\r\nВозможности профессионального и карьерного роста;\r\nПолное соответствие ТК РК;\r\nМедицинская страховка;\r\nКомпенсация затрат на мобильную связь.",
     "groups": [],
     "user_permissions": []
   }
@@ -145,13 +145,40 @@
     "name": "ТОО Морковка",
     "role": 1,
     "phone": "+7(777)556-74-18",
-    "photo": "",
+    "photo": "photo/logo_1_gM4092t.jpg",
     "birthday": null,
     "telegram": null,
     "facebook": null,
     "linkedin": null,
     "sex": null,
     "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$PtzUuzFas4VYvgJPFXYpe0$AsK3gqkSRN/mEaAye8ke6HxAHzyO3gDR8N/3hwnLo58=",
+    "last_login": "2022-11-14T07:29:58.294Z",
+    "is_superuser": false,
+    "username": "hope4",
+    "first_name": "",
+    "last_name": "",
+    "email": "qqq@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-14T07:29:57.974Z",
+    "name": "Надежда",
+    "role": 1,
+    "phone": "+7(777)556-74-18",
+    "photo": "",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "sex": null,
+    "description": null,
     "groups": [],
     "user_permissions": []
   }
@@ -982,6 +1009,114 @@
     "object_repr": "ТОО Морковка",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-11-14T05:39:07.484Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "5",
+    "object_repr": "ТОО Морковка",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-11-14T05:39:38.874Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "4",
+    "object_repr": "ИП Надежда",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-11-14T05:39:47.791Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "ИП Вася",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-11-14T05:40:30.375Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "2",
+    "object_repr": "Надежда",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-11-14T06:12:27.169Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "1",
+    "object_repr": "root",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"\\u0420\\u043e\\u043b\\u044c\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-11-14T06:19:17.586Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "1",
+    "object_repr": "root",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
   }
 }
 ]

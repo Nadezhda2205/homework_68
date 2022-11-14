@@ -1,4 +1,4 @@
-{% comment %} {% load static %} {% endcomment %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +40,13 @@
         <li class="cl_color">
           Здравствуйте,
             <a href="#">
-              <span><img style="width: 50px; height: 50px;" src="{{ request.user.photo.url }}" class="card-img" alt=""></span>
+              {% if user.photo %}
+                <span><img style="width: 50px; height: 50px;" src="{{ user.photo.url }}" class="card-img rounded-circle" alt=""></span>
+                
+              {% else %}
+                <span><img style="width: 50px; height: 50px;" src="{% static 'img/default.jpeg' %}" class="card-img" alt=""></span>
+                
+              {% endif %}
             </a>
         </li>
         <li>    
