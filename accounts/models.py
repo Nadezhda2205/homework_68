@@ -21,6 +21,12 @@ class Account(AbstractUser):
     telegram = models.CharField(max_length=50, null=True, blank=True)
     facebook = models.CharField(max_length=50, null=True, blank=True)
     linkedin = models.CharField(max_length=50, null=True, blank=True)
+    respond_vacancies = models.ManyToManyField(
+        to='main.Vacancy',
+        verbose_name='Вакансии', 
+        related_name='applicants', 
+        through='main.Response'
+        )
 
     sex = models.CharField(
         choices=SEX_CHOICES,

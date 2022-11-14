@@ -128,6 +128,8 @@ class Response(models.Model):
         on_delete=models.CASCADE, 
         related_name='responses' 
     )
+    created_at = models.DateTimeField(auto_now_add=True)
+
     def __str__(self) -> str:
         return f'Отклик на {self.vacancy}'
     
