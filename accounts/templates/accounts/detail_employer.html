@@ -40,12 +40,22 @@
     </thead>
     <tbody>
       {% for vacancy in account.vacancies.all %}
+      {% if vacancy.author == user or vacancy.is_public %}
         <tr>
-          <td><a href="{% url 'vacancy_detail' vacancy.pk %}">{{ vacancy.name }}</a><p>{{vacancy.updated_at}}</p></td>
+          <td>
+            <a href="{% url 'vacancy_detail' vacancy.pk %}">{{ vacancy.name }}</a>
+            <div>{{vacancy.updated_at}}</div>
+            {% if not vacancy.is_public %} <div>Не опубликовано</div> {% endif %}
+          </td>
           <td>{{ vacancy.salary }} тенге</td>
-          <td><a href="{% url 'vacancy_update' vacancy.pk %}">Редактировать</a></td>
-          <td><a href="{% url 'vacancy_date_update' vacancy.pk %}">Обновить</a></td>
+          {% if vacancy.author == user %}
+            <td><a href="{% url 'vacancy_update' vacancy.pk %}">Редактировать</a></td>
+            <td><a href="{% url 'vacancy_date_update' vacancy.pk %}">Обновить</a></td>
+          {% endif %}
+
         </tr>
+      {% endif %}
+        
       {% endfor %}
     </tbody>
   </table>
