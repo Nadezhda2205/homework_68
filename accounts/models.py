@@ -29,7 +29,7 @@ class Account(AbstractUser):
         verbose_name='Пол',
         max_length=1
     )
-    description = models.TextField(null=True)
+    description = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = 'Профиль'
