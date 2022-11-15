@@ -21,6 +21,7 @@ class Account(AbstractUser):
     telegram = models.CharField(max_length=50, null=True, blank=True)
     facebook = models.CharField(max_length=50, null=True, blank=True)
     linkedin = models.CharField(max_length=50, null=True, blank=True)
+    email = models.EmailField()
     respond_vacancies = models.ManyToManyField(
         to='main.Vacancy',
         verbose_name='Вакансии', 
