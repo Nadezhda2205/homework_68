@@ -1,11 +1,56 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 {% load static %}
 
 {% block title %}
     Просмотр страницы соискателя
 {% endblock %}
 
-
 {% block content %}
-  Соискатель {{ account.name }}
+<div class = "row">
+  <div class = "col-md-3 col-sm-6 me-5">
+    {% if account.photo %}
+        <img class="rounded-circle" src="{{ account.photo.url }}" alt="image" height="250" width="250">
+    {% else %}
+        <img class="rounded-circle" src="{% static 'img/default.jpeg' %}" alt="image" height="250" >
+    {%endif%}
+  </div>
+  <div class = "col-md-7 col-sm-6">
+    <h3>{{ account.name }}</h3>
+    {% if account == user %}
+
+    <form action="{% url 'account_update' account.username %}" method="POST" enctype="multipart/form-data">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Редактировать профиль
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Редактирование профиля</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              {% csrf_token %}
+            {{ accout_update_form|bootstrap }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-secondary btn-sm ms-5">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+    {% endif %}
+    {% if account.description %}
+      <p>{{ account.description }}</p>
+    {% endif %}
+
+  </div>
+</div>
 {% endblock %}
