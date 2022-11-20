@@ -1,10 +1,11 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
 from accounts.views import LoginView, logout_view, RegisterView, AccountDetailView, AccountUpdateView
-from main.views import VacancyListView, VacancyCreateView, VacancyDetailView, VacancyUpdateView, VacancyDateUpdateView
+from main.views import VacancyListView, VacancyCreateView, VacancyDetailView, \
+    VacancyUpdateView, VacancyDateUpdateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -19,6 +20,8 @@ urlpatterns = [
     path('vacancy/create/', VacancyCreateView.as_view(), name='vacancy_create'),
     path('vacancy/<int:pk>', VacancyDetailView.as_view(), name='vacancy_detail'),
     path('vacancy/<int:pk>/update', VacancyUpdateView.as_view(), name='vacancy_update'),
-    path('vacancy/<int:pk>/update_date', VacancyDateUpdateView, name='vacancy_date_update')
+    path('vacancy/<int:pk>/update_date', VacancyDateUpdateView, name='vacancy_date_update'),
+
+    path('applicant/', include('main.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

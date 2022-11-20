@@ -50,7 +50,49 @@
     {% if account.description %}
       <p>{{ account.description }}</p>
     {% endif %}
-
+    <a href="{% url 'create_resume' %}">
+      <button type="button" class="btn btn-primary" >
+        Создать резюме
+      </button>
+    </a>
+<div class="row mt-5">
+{% for resume in account.resumes.all %}
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{resume.vacancy_category}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{resume.salary}}</h6>
+      <h7 class="card-subtitle mb-2 ">{{resume.updated_at}}</h7>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<!--    <a href="#" class="card-link">Card link</a>-->
+<!--    <a href="#" class="card-link">Another link</a>-->
+<!--    <a href="#" class="card-link">Card link</a>-->
+    <div class="row ">
+        <div class="col-4 card-link">
+            <form action="{% url 'resume_update_date' resume.pk %}" method="POST">
+                {% csrf_token %}
+                <div id="container">
+                    <button type="submit" class="btn btn-primary">Обновить</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4 card-link">
+            <form action="{% url 'resume_public' resume.pk %}" method="POST">
+                {% csrf_token %}
+                <div >
+                    {% if resume.is_public %}
+                    <button type="submit" id="public" class="btn btn-primary">Не публиковать</button>
+                    {% else%}
+                    <button type="submit" id="public" class="btn btn-primary">Опубликовать</button>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+        <a href="{% url 'edit_resume' resume.pk %}" role="button" class="col-4 btn btn-primary card-link">Редактировать</a>
+  </div>
+  </div>
+</div>
+{% endfor %}
+</div>
   </div>
 </div>
 {% endblock %}

@@ -13,6 +13,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from accounts.forms import LoginForm, CustomUserСreationForm, AccoutUpdateForm
 from accounts.models import Account
 
+from main.models import Resume, Vacancy
 
 
 class LoginView(TemplateView):
@@ -106,3 +107,5 @@ class AccountUpdateView(LoginRequiredMixin, UpdateView):
         if not self.get_object() == request.user:
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
+
+

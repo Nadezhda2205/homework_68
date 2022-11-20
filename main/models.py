@@ -18,9 +18,12 @@ class Resume(models.Model):
         'main.VacancyCategory', 
         verbose_name=('Категория вакансии'), 
         on_delete=models.CASCADE, 
-        related_name='resumes' 
+        related_name='resumes',
+        null=True,
+        blank=False
+
     )
-    salary = models.PositiveIntegerField(verbose_name='Желаемая зарплата', null=True)
+    salary = models.PositiveIntegerField(verbose_name='Желаемая зарплата', null=True, blank=True)
     author = models.ForeignKey(
         verbose_name='Автор',
         to=get_user_model(), 
@@ -28,7 +31,7 @@ class Resume(models.Model):
         on_delete=models.CASCADE
     )
     updated_at = models.DateTimeField(auto_now=True)
-    is_public = models.BooleanField()
+    is_public = models.BooleanField(null=True, blank=False)
 
 
     def __str__(self) -> str:
