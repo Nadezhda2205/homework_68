@@ -91,18 +91,26 @@
   </table>
   {% if account == user %}
     <h3>Список откликов на вакансии</h3>
-    {% for vacancy in account.vacancies.all %}
-      {% if vacancy.responses.all %}
-        
-        <div>Вакансия: {{ vacancy.name }}</div>
-        <div>Откликнулись</div>
-        {% for applicant in vacancy.applicants.all %}
+    <div>
 
-          <div><a href="{% url 'account_detail' applicant.username %}">{{ applicant }}</a></div>
-        {% endfor %}
-      {% endif %}
-
-    {% endfor %}
+      {% for vacancy in account.vacancies.all %}
+        {% if vacancy.responses.all %}
+          <div>Вакансия: {{ vacancy.name }}</div>
+          <div>Откликнулись</div>
+          {% for response in vacancy.responses.all %}
+          <div>
+            <a class="me-5"href="{% url 'account_detail' response.applicant.username %}">
+              {{ response.applicant.username }}
+            </a>
+            <a class="btn btn-secondary btn-sm ms-5" href="{% url 'response_detail' response.pk  %}">
+              <span>Чат</span>
+            </a>
+          </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      <hr>
+    </div>
   {% endif %}
   
 {% endblock %}

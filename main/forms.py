@@ -1,4 +1,5 @@
 from django import forms
+
 from main.models import Resume, Experience, Education
 
 class ResumeForm(forms.ModelForm):
@@ -16,3 +17,13 @@ class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
         fields = ('company', 'position', 'duties', 'begin_at', 'end_at')
+
+
+from main.models import Message
+
+class MessageCreateForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ('text',)
+        
+
