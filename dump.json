@@ -1,0 +1,1376 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "c7flx000flubw1ygs2l6pf14co8ie5xj",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-ZdempOcM1tpecAA5UpxUiLuTSCmgfTPz3iLSutS4dp7jWMRZoDj9bonyk9sOyoPafZJ5ass8Jrkr8qBdXqfCr8vh_h1U6nWrWWunXUAHhghNRpvCYHy4WZ1VUsrD4MhCsR6QC6WwEWONhoxgULH4fAGx-TaJ:1owOvE:-N6L1FVNfrPqRH0wPbxYrXl5yzoePL3YNIquAvEfsKs",
+    "expire_date": "2022-12-03T14:34:20.921Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rafxr5uk1pl8k5dcpyyp5fast9m5nk3j",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1oucLD:LH49B58rym7NsHwSt3OBAwBLkZgkVQO_h4b0Cx9ijSo",
+    "expire_date": "2022-11-28T16:29:47.892Z"
+  }
+},
+{
+  "model": "accounts.role",
+  "pk": 1,
+  "fields": {
+    "name": "работодатель"
+  }
+},
+{
+  "model": "accounts.role",
+  "pk": 2,
+  "fields": {
+    "name": "соискатель"
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
+    "last_login": "2022-11-19T14:30:33.199Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-11-12T14:17:51Z",
+    "name": "root",
+    "role": 1,
+    "phone": "1",
+    "photo": "photo/img_root.jpg",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "qqq@mail.ru",
+    "sex": null,
+    "description": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$XUhGiXN21IFH5QnKwyMQwD$RFICCwV0XK932N24KrE3jGXJUAFlRmHzETyw5YFuQgs=",
+    "last_login": "2022-11-14T07:21:07.544Z",
+    "is_superuser": false,
+    "username": "hope",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-12T16:29:01Z",
+    "name": "Надежда",
+    "role": 2,
+    "phone": "+7(777)556-74-18",
+    "photo": "photo/logo_2_sZmq43c.jpg",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "qqq@mail.ru",
+    "sex": null,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность\r\nПлюсы для вас:\r\n\r\nДостойный оклад + бонусы по результатам выполнения KPI;\r\nВозможности профессионального и карьерного роста;\r\nПолное соответствие ТК РК;\r\nМедицинская страховка;\r\nКомпенсация затрат на мобильную связь.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Wzf5649BzTOKhVOGhDIUFC$8zI5ARwnL8VY9R1WeRrKa4+QEg8fKGU+cBW82B78mLo=",
+    "last_login": "2022-11-14T07:22:55.693Z",
+    "is_superuser": false,
+    "username": "hope2",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-12T16:31:38Z",
+    "name": "ИП Вася",
+    "role": 1,
+    "phone": "+7(777)556-74-18",
+    "photo": "photo/Screenshot_2015-02-06-09-21-21.png",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "sss@mail.ru",
+    "sex": null,
+    "description": "Добрый день, уважаемый соискатель! Наша группа компаний Iceberg существует уже более 10 лет и имеет множество диверсифицированных направлений. Мы занимаемся проектами в самых различных областях - это обслуживание разнообразной техники и аппаратуры, разработка софта, различных приложений и ресурсов, утилизация по государственному регламенту, образовательные курсы, а также химчистка и множество других направлений.\r\n\r\nНаши филиалы находимся в трех самых крупных городах Казахстана - Алматы, Нур-Султан, Шымкент. А наша дружная команда составляет уже более 100 самых сильных специалистов в своих областях. Мы на постоянной основе работаем над перспективными проектами, часть из которых не имеет альтернативы на территории СНГ.\r\n\r\nОсновными качествами, которые мы требуем от наших сотрудников - это честность и ответственность. Мы не те, кто ищет готовых и устоявшихся специалистов! Всегда готовы взять на обучение, поддержать перспективных и энергичных, начинающих специалистов. Мы за все ваши начинания и желание к саморазвитию, работе, изучению основ и навыков вашей профессиональной деятельности.\r\n\r\nОбещаем конкурентную заработную плату и большие перспективы роста для активных участников нашей большой семьи. С уважением компания Iceberg!",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$fICDtA4hP0jhSJIEHOuOjy$ZpRdlmnoI0O4Yy86k9z0/x7XeSSpItN9tZwMaXo7vBA=",
+    "last_login": "2022-11-12T16:48:54Z",
+    "is_superuser": false,
+    "username": "hope3",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-12T16:48:53Z",
+    "name": "ИП Надежда",
+    "role": 1,
+    "phone": "+7(777)556-74-18",
+    "photo": "photo/Screenshot_2015-02-06-09-21-21.png",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "qqq@mail.ru",
+    "sex": null,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность\r\nПлюсы для вас:\r\n\r\nДостойный оклад + бонусы по результатам выполнения KPI;\r\nВозможности профессионального и карьерного роста;\r\nПолное соответствие ТК РК;\r\nМедицинская страховка;\r\nКомпенсация затрат на мобильную связь.",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$mVvz924GsYG8VXiadPwkpH$DOWeH0sjMUJrfZkNYtBAQDUfZKq9klL/zNHCgZMpI98=",
+    "last_login": "2022-11-14T15:24:17.479Z",
+    "is_superuser": false,
+    "username": "rebbit",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-13T18:01:50Z",
+    "name": "ТОО Морковка",
+    "role": 1,
+    "phone": "+7(777)556-74-18",
+    "photo": "photo/logo_1_gM4092t.jpg",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "qqq@mail.ru",
+    "sex": null,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$PtzUuzFas4VYvgJPFXYpe0$AsK3gqkSRN/mEaAye8ke6HxAHzyO3gDR8N/3hwnLo58=",
+    "last_login": "2022-11-14T07:29:58.294Z",
+    "is_superuser": false,
+    "username": "hope4",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-14T07:29:57.974Z",
+    "name": "Надежда",
+    "role": 1,
+    "phone": "+7(777)556-74-18",
+    "photo": "",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "qqq@mail.ru",
+    "sex": null,
+    "description": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ImIpROGtQevLDCh5SsbRcB$U4tWWjZOhXo+I8m+k/AgWUskqsg3sp8SkSyACgJqWt0=",
+    "last_login": "2022-11-19T14:34:20.913Z",
+    "is_superuser": false,
+    "username": "zhuldyz",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-19T14:34:20.552Z",
+    "name": "Zhuldyz",
+    "role": 2,
+    "phone": "8989898",
+    "photo": "",
+    "birthday": null,
+    "telegram": null,
+    "facebook": null,
+    "linkedin": null,
+    "email": "kalbayevazh@gmail.com",
+    "sex": null,
+    "description": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 1,
+  "fields": {
+    "name": "Инспектор по взысканию"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 2,
+  "fields": {
+    "name": "Финансовый менеджер"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 3,
+  "fields": {
+    "name": "Продавец-кассир"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 4,
+  "fields": {
+    "name": "Инженер ПТО"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 5,
+  "fields": {
+    "name": "Менеджер по переписке в инстаграм"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 6,
+  "fields": {
+    "name": "Оператор колл-центра"
+  }
+},
+{
+  "model": "main.vacancycategory",
+  "pk": 7,
+  "fields": {
+    "name": "Программист"
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 49,
+  "fields": {
+    "vacancy_category": 2,
+    "salary": 13,
+    "author": [
+      "zhuldyz"
+    ],
+    "updated_at": "2022-11-20T17:38:06.201Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 50,
+  "fields": {
+    "vacancy_category": 1,
+    "salary": 12,
+    "author": [
+      "zhuldyz"
+    ],
+    "updated_at": "2022-11-20T17:36:06.871Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 51,
+  "fields": {
+    "vacancy_category": 4,
+    "salary": 14,
+    "author": [
+      "zhuldyz"
+    ],
+    "updated_at": "2022-11-20T17:28:57.287Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 52,
+  "fields": {
+    "vacancy_category": 4,
+    "salary": 20,
+    "author": [
+      "zhuldyz"
+    ],
+    "updated_at": "2022-11-20T18:07:42.531Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.experience",
+  "pk": 1,
+  "fields": {
+    "begin_at": "2020-02-03",
+    "end_at": "2021-05-19",
+    "company": "Crystal Spring, Алматы",
+    "position": "Стажер-разработчик React",
+    "duties": "разработка и развитие пользовательского интерфейса WEB-портала\r\nразработка внутренних и интеграционных WEB-сервисов портала",
+    "resume": 1
+  }
+},
+{
+  "model": "main.experience",
+  "pk": 2,
+  "fields": {
+    "begin_at": "2020-02-03",
+    "end_at": "2022-08-17",
+    "company": "UNISTORY LLC",
+    "position": "Junior Frontend разработчик",
+    "duties": "Разработка фронтенд-части проектов;\r\nРабота с API;\r\nУстранение багов;\r\nВзаимодействие с другими участниками команды: разработчиками, тестировщиками, дизайнером и проектным менеджером.",
+    "resume": 2
+  }
+},
+{
+  "model": "main.experience",
+  "pk": 3,
+  "fields": {
+    "begin_at": "2019-12-02",
+    "end_at": "2021-12-15",
+    "company": "ТОО UCO",
+    "position": "Front-end Developer",
+    "duties": "опыт работы с JavaScript, CSS+HTML, Ajax, RestAPI\r\n\r\n- желателен опыт работы с React.",
+    "resume": 3
+  }
+},
+{
+  "model": "main.experience",
+  "pk": 4,
+  "fields": {
+    "begin_at": "2022-10-11",
+    "end_at": "2020-10-10",
+    "company": "TOO Zhuldyz",
+    "position": "Engineer",
+    "duties": "assaxsa",
+    "resume": 52
+  }
+},
+{
+  "model": "main.education",
+  "pk": 1,
+  "fields": {
+    "begin_at": "2021-10-04",
+    "end_at": "2022-08-17",
+    "description": "Обучение в школе",
+    "resume": 1
+  }
+},
+{
+  "model": "main.education",
+  "pk": 2,
+  "fields": {
+    "begin_at": "2020-07-05",
+    "end_at": "2021-08-25",
+    "description": "Обучение в университете",
+    "resume": 2
+  }
+},
+{
+  "model": "main.education",
+  "pk": 3,
+  "fields": {
+    "begin_at": "2022-10-11",
+    "end_at": "2022-10-11",
+    "description": "вааврв",
+    "resume": 37
+  }
+},
+{
+  "model": "main.education",
+  "pk": 4,
+  "fields": {
+    "begin_at": "2022-10-10",
+    "end_at": "2022-10-10",
+    "description": "ууук",
+    "resume": 38
+  }
+},
+{
+  "model": "main.education",
+  "pk": 5,
+  "fields": {
+    "begin_at": "2022-10-10",
+    "end_at": "2022-10-10",
+    "description": "кукук",
+    "resume": 39
+  }
+},
+{
+  "model": "main.education",
+  "pk": 6,
+  "fields": {
+    "begin_at": "2022-10-10",
+    "end_at": "2022-10-10",
+    "description": "sfsfs",
+    "resume": 44
+  }
+},
+{
+  "model": "main.education",
+  "pk": 10,
+  "fields": {
+    "begin_at": "2020-10-10",
+    "end_at": "2021-09-12",
+    "description": "QQQQQQ",
+    "resume": 49
+  }
+},
+{
+  "model": "main.education",
+  "pk": 11,
+  "fields": {
+    "begin_at": "2022-12-12",
+    "end_at": "2022-12-12",
+    "description": "wrwrwrwr",
+    "resume": 49
+  }
+},
+{
+  "model": "main.education",
+  "pk": 12,
+  "fields": {
+    "begin_at": "2019-10-10",
+    "end_at": "2020-10-10",
+    "description": "weeeqeqwq",
+    "resume": 51
+  }
+},
+{
+  "model": "main.education",
+  "pk": 13,
+  "fields": {
+    "begin_at": "2013-10-10",
+    "end_at": "2020-10-10",
+    "description": "KazGUUU",
+    "resume": 52
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 1,
+  "fields": {
+    "name": "Тайный проверяющий",
+    "salary": 30,
+    "description": "Мы приглашаем Вас принять участие в программе по улучшению качества обслуживания в супермаркетах, банках, магазинах одежды и парфюмерии, автозаправочных станциях и других отраслях (направлениях) сферы услуг.\r\n\r\n*ТРЕБОВАНИЯ К КАНДИДАТАМ:*\r\n\r\n-тактичность, внимательность и ответственность\r\n\r\n-доступ в Интернет\r\n\r\n-наличие диктофона или телефона с функцией звукозаписи\r\n\r\n*УСЛОВИЯ:*\r\n\r\n-Оплата производится без задержек.\r\n\r\n-График работы и оплату вы выбираете сами:\r\n\r\n-5000-8000KZT - неполный рабочий день (2-3 часа)\r\n\r\n-10000 -15000 KZT - рабочий день\r\n\r\n(через день, каждый день, полдня).",
+    "experience_time": 3,
+    "vacancy_category": 1,
+    "is_public": true,
+    "author": [
+      "hope"
+    ],
+    "updated_at": "2022-11-13T06:54:32.560Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 2,
+  "fields": {
+    "name": "Оператор колл-центра (удаленно)",
+    "salary": 24,
+    "description": "Грамотная устная и письменная речь. Умение и желание много общаться по телефону.\r\n\r\nНавыки работы на компьютере, хорошая скорость печати.\r\n\r\nНаличие компьютера или ноутбука и исправной гарнитуры (наушники с микрофоном).\r\n\r\nСтабильный и быстрый проводной интернет (не менее 2 Мбит/сек).\r\n\r\nУстановленный MS Windows (7 и выше), MS Office и Skype.\r\n\r\nТихое рабочее место, отсутствие отвлекающих факторов. Отсутствие проблем с электричеством.\r\n\r\nОпыт работы и образование — не важны. Мы сами поможем вам стать профессионалом.",
+    "experience_time": 7,
+    "vacancy_category": 6,
+    "is_public": true,
+    "author": [
+      "hope2"
+    ],
+    "updated_at": "2022-11-13T06:54:26.603Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 3,
+  "fields": {
+    "name": "IT программист",
+    "salary": 47,
+    "description": "владеете базовыми технологиями, знаете JS и css html php\r\nимеете опыт разработки продуктов;\r\nответственны и проактивны, умеете работать в команде и самостоятельно восполнять недостающие навыки и знания;\r\nувлекаетесь новыми технологиями во фронтенде;\r\nбудет преимуществом, если у вас есть опыт настройки окружения, написания тестов и выбора библиотек.\r\nпервое время будет много задач по верстке, также будут задачи на написание бизнес-логики;\r\nписать стабильный, поддерживаемый код, который решает задачи бизнеса;\r\nучаствовать в Code review;\r\nвместе с командой проектировать архитектуру приложений и выбирать технологии;\r\nвзаимодействовать с командами разработки.\r\nСреднее или Высшее законченное техническое образование.\r\n\r\nРассматриваем без опыта работы.\r\n\r\nНаличие сертификатов (приветствуется).\r\n\r\nУмение находить общий язык\r\n\r\nЖелание работать и зарабатывать\r\n\r\nСоставление графиков работы",
+    "experience_time": 3,
+    "vacancy_category": 7,
+    "is_public": true,
+    "author": [
+      "hope2"
+    ],
+    "updated_at": "2022-11-13T06:53:04.124Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 4,
+  "fields": {
+    "name": "Торговый представитель",
+    "salary": 200000,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
+    "experience_time": 2,
+    "vacancy_category": 3,
+    "is_public": false,
+    "author": [
+      "rebbit"
+    ],
+    "updated_at": "2022-11-14T15:32:43.983Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 5,
+  "fields": {
+    "name": "Торговый представитель / Мерчендайзер",
+    "salary": 300000,
+    "description": "Требования:\r\n\r\nВысшее образование желательно\r\nОпыт работы торговым представителем (мерчендайзером) не менее 1 года\r\nОпыт работы с дилерами\r\nОпыт работы в оформлении торговых точек\r\nХорошее знание своего города\r\nЗнание казахского языка желательно\r\nОбязанности:\r\n\r\nВедение базы данных по торговым точкам\r\nКонтроль торговых точек за выполнением условий программы по продвижению услуг и продукции компании\r\nКонтроль оформления торговых точек\r\nКонтроль дилеров на вверенной территории для соблюдения ими ценовой политики, ассортимента и запаса продукции\r\nОтчетность",
+    "experience_time": 4,
+    "vacancy_category": 3,
+    "is_public": true,
+    "author": [
+      "rebbit"
+    ],
+    "updated_at": "2022-11-14T15:33:57.118Z"
+  }
+},
+{
+  "model": "main.vacancy",
+  "pk": 6,
+  "fields": {
+    "name": "Повар",
+    "salary": 100000,
+    "description": "Варить суп и все такое",
+    "experience_time": 3,
+    "vacancy_category": 3,
+    "is_public": true,
+    "author": [
+      "root"
+    ],
+    "updated_at": "2022-11-14T14:45:25.130Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 1,
+  "fields": {
+    "vacancy": 1,
+    "applicant": [
+      "hope"
+    ],
+    "resume": 1,
+    "created_at": "2022-11-14T00:00:00Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 2,
+  "fields": {
+    "vacancy": 2,
+    "applicant": [
+      "hope2"
+    ],
+    "resume": 2,
+    "created_at": "2022-11-14T00:00:00Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 3,
+  "fields": {
+    "vacancy": 5,
+    "applicant": [
+      "hope"
+    ],
+    "resume": 2,
+    "created_at": "2022-11-14T00:00:00Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 4,
+  "fields": {
+    "vacancy": 6,
+    "applicant": [
+      "hope3"
+    ],
+    "resume": 1,
+    "created_at": "2022-11-14T00:00:00Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 1,
+  "fields": {
+    "response": 1,
+    "author": [
+      "hope"
+    ],
+    "text": "Хочу работать у вас",
+    "created_at": "2022-11-13T05:15:04.845Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 2,
+  "fields": {
+    "response": 2,
+    "author": [
+      "hope3"
+    ],
+    "text": "мне понравились ваши условия, предложенные вами",
+    "created_at": "2022-11-13T05:16:09.017Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-11-12T14:21:29.516Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "1",
+    "object_repr": "Role object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-11-12T14:21:37.669Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "2",
+    "object_repr": "Role object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-11-12T18:08:23.247Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "1",
+    "object_repr": "VacancyCategory object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-11-12T18:08:37.224Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "2",
+    "object_repr": "VacancyCategory object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-11-12T18:08:46.780Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "3",
+    "object_repr": "VacancyCategory object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-11-12T18:08:55.921Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "4",
+    "object_repr": "VacancyCategory object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-11-12T18:09:16.547Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "5",
+    "object_repr": "VacancyCategory object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-11-12T18:16:33.025Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Инспектор по взысканию",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-11-12T18:16:45.543Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: Финансовый менеджер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-11-12T18:16:58.573Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "3",
+    "object_repr": "hope2: Инженер ПТО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-11-12T18:38:10.872Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "education"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Период обучения с 2021-10-04 по 2022-08-17",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-11-12T18:38:52.459Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "education"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: Период обучения с 2020-07-05 по 2021-08-25",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-11-12T18:42:49.363Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Crystal Spring, Алматы: Стажер-разработчик React",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-11-12T18:44:06.202Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: UNISTORY LLC: Junior Frontend разработчик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-11-12T18:45:00.585Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "experience"
+    ],
+    "object_id": "3",
+    "object_repr": "hope2: ТОО UCO: Front-end Developer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-11-12T19:11:36.885Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: Тайный проверяющий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-11-12T19:13:50.329Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "6",
+    "object_repr": "Оператор колл-центра",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-11-12T19:13:57.767Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "2",
+    "object_repr": "hope2: Оператор колл-центра (удаленно)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-11-13T05:14:27.391Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: hope: Тайный проверяющий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-11-13T05:14:34.771Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "2",
+    "object_repr": "hope2: hope2: Оператор колл-центра (удаленно)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-11-13T05:15:04.845Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "message"
+    ],
+    "object_id": "1",
+    "object_repr": "hope: 2022-11-13 05:15:04.845839+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-11-13T05:16:09.017Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "message"
+    ],
+    "object_id": "2",
+    "object_repr": "hope3: 2022-11-13 05:16:09.017780+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-11-13T06:51:27.894Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancycategory"
+    ],
+    "object_id": "7",
+    "object_repr": "Программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-11-13T06:53:04.419Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "3",
+    "object_repr": "IT программист",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-11-13T06:54:26.605Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "2",
+    "object_repr": "Оператор колл-центра (удаленно)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-11-13T06:54:32.562Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "1",
+    "object_repr": "Тайный проверяющий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-11-13T13:18:48.567Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "role"
+    ],
+    "object_id": "1",
+    "object_repr": "работодатель",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-11-13T14:44:30.272Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "ИП Вася",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-11-13T18:02:26.883Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "5",
+    "object_repr": "Торговый представитель / Мерчендайзер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-11-13T18:02:47.596Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "4",
+    "object_repr": "Торговый представитель / Мерчендайзер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-11-13T18:03:56.851Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "5",
+    "object_repr": "ТОО Морковка",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-11-14T05:39:07.484Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "5",
+    "object_repr": "ТОО Морковка",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-11-14T05:39:38.874Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "4",
+    "object_repr": "ИП Надежда",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-11-14T05:39:47.791Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "ИП Вася",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-11-14T05:40:30.375Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "2",
+    "object_repr": "Надежда",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-11-14T06:12:27.169Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "1",
+    "object_repr": "root",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"\\u0420\\u043e\\u043b\\u044c\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-11-14T06:19:17.586Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "1",
+    "object_repr": "root",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-11-14T14:58:18.613Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "4",
+    "object_repr": "Торговый представитель",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2022-11-14T14:58:26.851Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "vacancy"
+    ],
+    "object_id": "4",
+    "object_repr": "Торговый представитель",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2022-11-14T16:30:32.367Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "3",
+    "object_repr": "Отклик на Торговый представитель / Мерчендайзер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2022-11-14T16:30:49.445Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "4",
+    "object_repr": "Отклик на Повар",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

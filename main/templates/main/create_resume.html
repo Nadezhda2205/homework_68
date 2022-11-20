@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+
+{% block title %}
+Добавить резюме
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'edit_resume' resume.pk %}" method='POST' enctype="multipart/form-data">
+    <div class='form'>
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" value="Создать резюме">
+        <a href="{% url 'account_detail' request.user.username %}" class="btn btn-primary" role="button">Отмена</a>
+    </div>
+</form>
+<div>
+
+    <span><a href="{% url 'add_education' resume.pk %}">
+        <button type="button" class="btn btn-primary" >
+        Добавить образование
+      </button></a>
+    </span>
+    <span><a href="{% url 'add_experience' resume.pk %}">
+        <button type="button" class="btn btn-primary" >
+        Добавить опыт работы
+      </button></a>
+    </span>
+</div>
+
+{% endblock %}

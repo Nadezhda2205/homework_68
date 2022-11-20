@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %}
+Добавить резюме
+{% endblock %}
+{% block content %}
+<form action="{% url 'edit_resume' resume.pk %}" method='POST' enctype="multipart/form-data">
+    <div class='form'>
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" value="Изменить данные">
+        <a href="{% url 'account_detail' request.user.username %}" class="btn btn-primary" role="button">Отмена</a>
+    </div>
+</form>
+<div>
+     <span><a href="{% url 'add_education' resume.pk %}">
+        <button type="button" class="btn btn-primary" >
+        Добавить образование
+      </button></a>
+    </span>
+    <span><a href="{% url 'add_experience' resume.pk %}">
+        <button type="button" class="btn btn-primary" >
+        Добавить опыт работы
+      </button></a>
+    </span>
+</div>
+<div>
+    {% for experience in resume.experiences.all %}
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Организация</th>
+            <th scope="col">Должность</th>
+              <th scope="col">Обязанности</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>{{ experience.company }}</p></td>
+            <td>{{experience.position}}</td>
+              <td>{{experience.duties}}</td>
+            <td>
+                <a class="card-link" href="{% url 'edit_experience' experience.pk %}">
+              <button class="btn btn-warning"><i class="glyphicon glyphicon-pencil">Edit</i></button>
+                </a>
+                <a class="card-link">
+                    <form method="POST" action="{% url 'delete_experience' experience.pk %}">
+                    {% csrf_token %}<input type="submit" value="DELETE">
+                    </form>
+                </a>
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+<div>
+    {% for education in resume.educations.all %}
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Образование</th>
+            <th scope="col">Дата начала</th>
+              <th scope="col">Дата завершения</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>{{ education.description }}</p></td>
+            <td>{{education.begin_at}}</td>
+              <td>{{education.end_at}}</td>
+            <td>
+                <a class="card-link" href="{% url 'edit_education' education.pk %}">
+              <button class="btn btn-warning"><i class="glyphicon glyphicon-pencil">Edit</i></button>
+                </a>
+                <a class="card-link">
+                    <form method="POST" action="{% url 'delete_education' education.pk %}">
+                    {% csrf_token %}<input type="submit" value="DELETE">
+                    </form>
+                </a>
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+
+{% endblock %}
