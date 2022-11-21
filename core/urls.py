@@ -5,37 +5,32 @@ from django.conf import settings
 
 from accounts.views import LoginView, logout_view, RegisterView, AccountDetailView, AccountUpdateView
 
-from main.views import VacancyListView, VacancyCreateView, VacancyDetailView, \
-    VacancyUpdateView, VacancyDateUpdateView
-
-from main.views import VacancyListView, VacancyCreateView, VacancyDetailView, VacancyUpdateView, VacancyDateUpdateView, ResponseDetailView, MessageCreateView
+from main.views import (
+    VacancyListView,
+    VacancyCreateView,
+    VacancyDetailView,
+    VacancyUpdateView,
+    get_messages_view,
+    vacancy_date_update_view,
+    MessageCreateView
+)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', VacancyListView.as_view(), name='index'),
-
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', logout_view, name='logout'),
-    
     path('register/', RegisterView.as_view(), name='register'),
     path('<str:slug>', AccountDetailView.as_view(), name='account_detail'),
-
     path('<str:slug>/update', AccountUpdateView.as_view(), name='account_update'),
-
     path('vacancy/create/', VacancyCreateView.as_view(), name='vacancy_create'),
     path('vacancy/<int:pk>', VacancyDetailView.as_view(), name='vacancy_detail'),
     path('vacancy/<int:pk>/update', VacancyUpdateView.as_view(), name='vacancy_update'),
-    path('vacancy/<int:pk>/update_date', VacancyDateUpdateView, name='vacancy_date_update'),
-
+    path('vacancy/<int:pk>/update_date', vacancy_date_update_view, name='vacancy_date_update'),
 
     path('applicant/', include('main.urls')),
 
-    
-    path('response/<int:pk>', ResponseDetailView.as_view(), name='response_detail'),
-    path('response/<int:pk>/message/create/', MessageCreateView.as_view(), name='message_create')
-
-
-
+    path('response/<int:pk>/message/create/', MessageCreateView.as_view(), name='message_create'),
+    path('response/<int:pk>/messages/', get_messages_view, name='messages_list')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
