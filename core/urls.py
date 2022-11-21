@@ -29,7 +29,7 @@ urlpatterns = [
     path('vacancy/<int:pk>/update_date', VacancyDateUpdateView, name='vacancy_date_update'),
 
 
-    path('applicant/', include('main.urls'))
+    path('applicant/', include('main.urls')),
 
     
     path('response/<int:pk>', ResponseDetailView.as_view(), name='response_detail'),
