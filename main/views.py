@@ -9,7 +9,7 @@ from django.http import JsonResponse
 from django.core.serializers import serialize
 
 
-from main.models import Vacancy, Message, Response
+from main.models import Vacancy, Message, Response, Resume
 from main.forms import MessageCreateForm
 
 
@@ -121,3 +121,23 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         if request.user == applicant_response or request.user == author_vacancy:
             return super().dispatch(request, *args, **kwargs)
         return self.handle_no_permission()
+
+
+class ResponseCreateView(CreateView):
+    model = Response
+
+    def post(self, request, *args, **kwargs):
+        vacansy_pk = kwargs.get('pk')
+        vacancy = get_object_or_404(Vacancy, pk=vacansy_pk)
+        applicant = request.user
+        resume_pk = request.POST.get('resume_pk')
+        resume = get_object_or_404(Resume, pk=resume_pk)
+        response = Response.objects.create(vacancy=vacancy, applicant=applicant, resume=resume)
+        
+        message_text = request.POST.get('message_text')
+        Message.objects.create(response=response, author=applicant, text=message_text)
+
+
+ 
+        return redirect('vacancy_detail', pk=vacansy_pk)
+    
