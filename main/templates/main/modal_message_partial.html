@@ -1,0 +1,21 @@
+{% load bootstrap %}
+
+
+<p>{{response}}</p>
+{% for message in response.messages.all %}
+    <span class="fst-italic">{{ message.author }}: - {{ message.text }}</span><br>
+    <p>Дата создания: {{ message.created_at }}
+    <hr>
+{% endfor %}
+
+
+<form action="{% url 'message_create' response.pk %}" method='POST'>
+    <div class='form'>
+        {% csrf_token %}
+
+        {{message_create_form|bootstrap }}
+
+        <input class="btn btn-secondary" type="submit" value="Отправить">
+        
+    </div>
+</form>

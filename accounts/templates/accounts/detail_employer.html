@@ -102,8 +102,8 @@
             <a class="me-5"href="{% url 'account_detail' response.applicant.username %}">
               {{ response.applicant.username }}
             </a>
-            <a class="btn btn-secondary btn-sm ms-5" href="{% url 'response_detail' response.pk  %}">
-              <span>Чат</span>
+            <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
+              Чат
             </a>
           </div>
           {% endfor %}
@@ -111,6 +111,59 @@
       {% endfor %}
       <hr>
     </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="messagesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Написать сообщение</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id='message-modal-body'>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-secondary btn-sm ms-5">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
   {% endif %}
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function() {
+
+      $('.chat').on('click', function(e) {
+        let pk = e.target.id;
+
+        fetch(`http://127.0.0.1:8000/response/${ pk }/messages/`)
+      .then((response) => {
+          return response.text();
   
+      })
+      .then((data) => {
+          console.log(data)
+          obj = document.getElementById('message-modal-body');
+          obj.innerHTML = data
+      });
+
+        })
+      })
+
+
+  </script>
 {% endblock %}

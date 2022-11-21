@@ -1,15 +1,16 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import redirect, get_object_or_404, render
 from django.views.generic import ListView, CreateView, DetailView, UpdateView
 from django.urls import reverse 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+from django.core.serializers import serialize
 
 
 from main.models import Vacancy, Message, Response
 from main.forms import MessageCreateForm
-# from accounts.models import Account
 
 
 class VacancyListView(ListView):
@@ -22,13 +23,8 @@ class VacancyListView(ListView):
         queryset = super().get_queryset()
         queryset = queryset.filter(is_public=True)
         return queryset
-    
+   
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     if not self.request.user.is_authenticated:
-    #         return context
-    #     user: Account
 
 class VacancyCreateView(CreateView):
     template_name = 'main/create_vacancy.html'
@@ -79,42 +75,19 @@ class VacancyUpdateView(LoginRequiredMixin, UpdateView):
 
 
 @login_required
-def VacancyDateUpdateView(request, pk):
+def vacancy_date_update_view(request, pk):
     vacancy = get_object_or_404(Vacancy, pk=pk)
     if not request.user == vacancy.author:
         return HttpResponseForbidden()
     vacancy.save()
     return redirect('account_detail', vacancy.author.username)
-    
 
-class ResponseDetailView(LoginRequiredMixin, DetailView):
-    template_name = 'main/detail_response.html'
-    model = Response
-    context_object_name = 'response'
-
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        form = MessageCreateForm()
-        context['form'] = form
-        return context
-
-    def dispatch(self, request, *args, **kwargs):
-        '''
-        pk отклика
-        конкретный отклик по pk
-        автор отклика(откликнувшийся)
-        автор вакансии
-        условие если юзер == откликнувшемуся или юзер == автору вакансии,
-        то разрешаем просмотр отклика
-        '''
-        response_pk = self.kwargs.get('pk')
-        response: Response = get_object_or_404(Response, pk=response_pk)
-        applicant_response = response.applicant
-        author_vacancy = response.vacancy.author
-        if request.user == applicant_response or request.user == author_vacancy:
-            return super().dispatch(request, *args, **kwargs)
-        return self.handle_no_permission()
+def get_messages_view(request, pk):
+    response = get_object_or_404(Response, pk=pk)
+    context = {}
+    context['message_create_form'] = MessageCreateForm()
+    context['response'] = response
+    return render(request=request, template_name='main/modal_message_partial.html', context=context)
 
 
 class MessageCreateView(LoginRequiredMixin, CreateView):
@@ -130,7 +103,7 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('response_detail', kwargs={'pk': self.kwargs.get('pk')})
+        return reverse('account_detail', kwargs={'slug': self.request.user.username})
 
     def dispatch(self, request, *args, **kwargs):
         '''
