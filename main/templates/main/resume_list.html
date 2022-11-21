@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Список резюме
+{% endblock %}
+
+{% block content %}
+<div class="row row-cols-3 row-cols-md-1 g-4">
+
+{% for resume in resumes %}
+
+
+
+<div class="card me-5" style="width: 18rem;">
+  <div class="card-body">
+    <a href="#" class="card-link">
+      <h5 class="card-title" style="height: 4rem;">{{resume.vacancy_category}}</h5>
+    </a>
+    <h6 class="card-subtitle mb-2 text-muted">{{resume.salary}} тенге</h6>
+    <a href="{% url 'account_detail' resume.author.username %}" class="card-link">
+      {{resume.author}}
+    </a>
+    <a href="{% url 'edit_resume' resume.pk %}" class="card-link">Подробнее</a>
+  </div>
+</div>
+
+
+
+  {% endfor %}
+
+{% endblock %}
