@@ -48,6 +48,15 @@ class ResumeUpdateDateView(UpdateView):
         resume.save()
         return redirect('account_detail', resume.author.username)
 
+class DeleteResumeView(DeleteView):
+    model = Resume
+    success_url = '/'
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
+
+
+
+
 
 
 class ResumePublicView(UpdateView):
