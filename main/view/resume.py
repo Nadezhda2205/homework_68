@@ -39,6 +39,18 @@ class ResumesIndexView(ListView):
     context_object_name = 'resumes'
 
 
+class ResumeListView(ListView):
+    template_name = 'main/resume_list.html'
+    model = Resume
+    context_object_name = 'resumes'
+
+    def get_queryset(self):
+        '''возвращает список элементов queryset'''
+        queryset = super().get_queryset()
+        queryset = queryset.filter(is_public=True)
+        return queryset
+
+
 class ResumeUpdateDateView(UpdateView):
     model = Resume
 

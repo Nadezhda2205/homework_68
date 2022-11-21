@@ -26,6 +26,8 @@
       <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Редактировать профиль
       </button>
+      <a class="btn btn-secondary btn-sm ms-5" href="{% url 'vacancy_create' %}" class="nav-link" aria-current="page">Добавить вакансию</a>
+      <a class="btn btn-secondary btn-sm ms-5" href="{% url 'resume_list' %}" class="nav-link" aria-current="page">Список резюме</a>
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
