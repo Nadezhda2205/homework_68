@@ -1,18 +1,18 @@
 [
 {
   "model": "sessions.session",
-  "pk": "bkb5m6tn4fm2kh81du21u2djzrwf6793",
-  "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1ownKS:6N3UUcPiN8OJKs82VMY-W5nN-BHeq0Ubz8FlI0coa2c",
-    "expire_date": "2022-12-04T16:38:00.891Z"
-  }
-},
-{
-  "model": "sessions.session",
   "pk": "rafxr5uk1pl8k5dcpyyp5fast9m5nk3j",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmaSnX63DOVBfQd4h36beZn7ukyZ7wo_6ODXGel5Ody_gwajfetitdMofa0VEUItQqkQEaO2UWFwqlIsReToo7HZCjBeYgYHmpQhTez9AfnvOHE:1oucLD:LH49B58rym7NsHwSt3OBAwBLkZgkVQO_h4b0Cx9ijSo",
     "expire_date": "2022-11-28T16:29:47.892Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ynems94rmqyu6pzk01i64gbzs6yar0is",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAUBf-FtSGXQgt16d5vIPcBUjUlKe3K-O_apAvdnpk5LxVxW0vcWlriJOqsOnX63Qj5keYdyB3nW9Vc53WZSO-KPmjT1yrpeTncv4OCrXzrzGgFwzh6zn1AD25k6HMnA1onZDwwMYJnSQFSNsF5R9YYIHI5DKDeHwLwOFY:1oxBZh:SMrxRa4JSgGjyeI_5D8O6n6JGvt6eXqUEHhTvYk3EoQ",
+    "expire_date": "2022-12-05T18:31:21.969Z"
   }
 },
 {
@@ -33,7 +33,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$AvsQhviFjiMIDt2K6HAXZo$0Xj87ePMfZPqSF0M66PaUXcNTMfdCpgdDTxoZdp2z5A=",
-    "last_login": "2022-11-20T16:38:00.884Z",
+    "last_login": "2022-11-21T14:29:49.997Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -51,7 +51,7 @@
     "linkedin": null,
     "email": "qqq@mail.ru",
     "sex": null,
-    "description": "",
+    "description": "Kolesa Group – международная продуктовая IT-компания, основанная в Казахстане. Мы создаем и развиваем классифайды – сервисы для публикации объявлений для людей и компаний. У нас 4 основных продукта. Каждый месяц их используют 12.5 млн людей. \r\n\r\nKolesa.kz — cамая популярная платформа автомобильных объявлений, сайт и мобильное приложение №1, а также крупнейший медиа-ресурс для автомобилистов в Казахстане. \r\n\r\nKrisha.kz — №1 сайт и приложение в категории “Недвижимость” в стране. Крупнейшая площадка для продажи и покупки первичной, вторичной и коммерческой недвижимости в Казахстане. \r\n\r\nMarket.kz — сервис бесплатных объявлений для всех категорий товаров и услуг. Ежемесячная аудитория более 2 млн человек. \r\n\r\nAvtoelon.uz — авто-классифайд в Узбекистане. Суммарная месячная аудитория 2 млн пользователей. С момента запуска в начале 2018 года Avtoelon.uz достиг лидерства в сегменте продажи и покупки автомобилей.",
     "groups": [],
     "user_permissions": []
   }
@@ -60,7 +60,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$XUhGiXN21IFH5QnKwyMQwD$RFICCwV0XK932N24KrE3jGXJUAFlRmHzETyw5YFuQgs=",
-    "last_login": "2022-11-20T10:24:27.062Z",
+    "last_login": "2022-11-21T18:31:21.963Z",
     "is_superuser": false,
     "username": "hope",
     "first_name": "",
@@ -114,7 +114,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$fICDtA4hP0jhSJIEHOuOjy$ZpRdlmnoI0O4Yy86k9z0/x7XeSSpItN9tZwMaXo7vBA=",
-    "last_login": "2022-11-20T16:27:25.228Z",
+    "last_login": "2022-11-21T18:30:32.233Z",
     "is_superuser": false,
     "username": "hope3",
     "first_name": "",
@@ -330,8 +330,8 @@
     "author": [
       "hope"
     ],
-    "updated_at": "2022-11-12T18:16:33.022Z",
-    "is_public": false
+    "updated_at": "2022-11-21T16:40:04.817Z",
+    "is_public": true
   }
 },
 {
@@ -343,8 +343,8 @@
     "author": [
       "hope3"
     ],
-    "updated_at": "2022-11-12T18:16:45.542Z",
-    "is_public": false
+    "updated_at": "2022-11-21T16:42:01.895Z",
+    "is_public": true
   }
 },
 {
@@ -356,20 +356,112 @@
     "author": [
       "hope2"
     ],
-    "updated_at": "2022-11-12T18:16:58.572Z",
-    "is_public": false
+    "updated_at": "2022-11-21T16:42:11.677Z",
+    "is_public": true
   }
 },
 {
-  "model": "main.experience",
-  "pk": 1,
+  "model": "main.resume",
+  "pk": 4,
   "fields": {
-    "begin_at": "2020-02-03",
-    "end_at": "2021-05-19",
-    "company": "Crystal Spring, Алматы",
-    "position": "Стажер-разработчик React",
-    "duties": "разработка и развитие пользовательского интерфейса WEB-портала\r\nразработка внутренних и интеграционных WEB-сервисов портала",
-    "resume": 1
+    "vacancy_category": 1,
+    "salary": 15,
+    "author": [
+      "hope3"
+    ],
+    "updated_at": "2022-11-21T17:42:14.120Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 5,
+  "fields": {
+    "vacancy_category": 2,
+    "salary": 4,
+    "author": [
+      "root"
+    ],
+    "updated_at": "2022-11-21T17:42:51.139Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 6,
+  "fields": {
+    "vacancy_category": 2,
+    "salary": 10,
+    "author": [
+      "root"
+    ],
+    "updated_at": "2022-11-21T17:45:28.852Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 7,
+  "fields": {
+    "vacancy_category": 4,
+    "salary": 15,
+    "author": [
+      "root"
+    ],
+    "updated_at": "2022-11-21T17:46:18.051Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 8,
+  "fields": {
+    "vacancy_category": null,
+    "salary": null,
+    "author": [
+      "hope"
+    ],
+    "updated_at": "2022-11-21T13:46:16.222Z",
+    "is_public": null
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 9,
+  "fields": {
+    "vacancy_category": null,
+    "salary": null,
+    "author": [
+      "hope"
+    ],
+    "updated_at": "2022-11-21T13:47:36.324Z",
+    "is_public": null
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 10,
+  "fields": {
+    "vacancy_category": null,
+    "salary": null,
+    "author": [
+      "hope"
+    ],
+    "updated_at": "2022-11-21T13:48:21.129Z",
+    "is_public": null
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 11,
+  "fields": {
+    "vacancy_category": 1,
+    "salary": null,
+    "author": [
+      "hope"
+    ],
+    "updated_at": "2022-11-21T13:49:16.441Z",
+    "is_public": null
   }
 },
 {
@@ -397,6 +489,18 @@
   }
 },
 {
+  "model": "main.experience",
+  "pk": 4,
+  "fields": {
+    "begin_at": "2019-12-02",
+    "end_at": "2021-05-19",
+    "company": "rty",
+    "position": "yrt",
+    "duties": "yrtyry",
+    "resume": 1
+  }
+},
+{
   "model": "main.education",
   "pk": 1,
   "fields": {
@@ -414,6 +518,16 @@
     "end_at": "2021-08-25",
     "description": "Обучение в университете",
     "resume": 2
+  }
+},
+{
+  "model": "main.education",
+  "pk": 3,
+  "fields": {
+    "begin_at": "2020-02-03",
+    "end_at": "2022-08-17",
+    "description": "gfgfh",
+    "resume": 11
   }
 },
 {
@@ -653,6 +767,78 @@
   }
 },
 {
+  "model": "main.response",
+  "pk": 10,
+  "fields": {
+    "vacancy": 6,
+    "applicant": [
+      "soiskatel"
+    ],
+    "resume": 1,
+    "created_at": "2022-11-20T18:07:14.170Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 11,
+  "fields": {
+    "vacancy": 6,
+    "applicant": [
+      "soiskatel3"
+    ],
+    "resume": 3,
+    "created_at": "2022-11-20T18:07:19.963Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 12,
+  "fields": {
+    "vacancy": 7,
+    "applicant": [
+      "hope"
+    ],
+    "resume": 9,
+    "created_at": "2022-11-21T17:52:06.920Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 13,
+  "fields": {
+    "vacancy": 7,
+    "applicant": [
+      "root"
+    ],
+    "resume": 5,
+    "created_at": "2022-11-21T18:25:52.522Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 14,
+  "fields": {
+    "vacancy": 7,
+    "applicant": [
+      "root"
+    ],
+    "resume": 7,
+    "created_at": "2022-11-21T18:26:23.352Z"
+  }
+},
+{
+  "model": "main.response",
+  "pk": 15,
+  "fields": {
+    "vacancy": 8,
+    "applicant": [
+      "hope"
+    ],
+    "resume": 1,
+    "created_at": "2022-11-21T18:29:42.126Z"
+  }
+},
+{
   "model": "main.message",
   "pk": 1,
   "fields": {
@@ -818,6 +1004,66 @@
     ],
     "text": "44",
     "created_at": "2022-11-20T16:28:13.335Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 15,
+  "fields": {
+    "response": 4,
+    "author": [
+      "root"
+    ],
+    "text": "да ну блин",
+    "created_at": "2022-11-21T15:31:46.235Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 16,
+  "fields": {
+    "response": 4,
+    "author": [
+      "root"
+    ],
+    "text": "aaaa",
+    "created_at": "2022-11-21T15:37:01.074Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 17,
+  "fields": {
+    "response": 4,
+    "author": [
+      "root"
+    ],
+    "text": "aasss",
+    "created_at": "2022-11-21T15:39:58.825Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 18,
+  "fields": {
+    "response": 15,
+    "author": [
+      "hope"
+    ],
+    "text": "приветттт",
+    "created_at": "2022-11-21T18:29:42.131Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 19,
+  "fields": {
+    "response": 15,
+    "author": [
+      "hope3"
+    ],
+    "text": "ghbfdd",
+    "created_at": "2022-11-21T18:30:51.125Z"
   }
 },
 {
@@ -1751,6 +1997,168 @@
       "response"
     ],
     "object_id": "9",
+    "object_repr": "Отклик на Слесарь-электрик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2022-11-20T18:07:14.171Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "10",
+    "object_repr": "Отклик на Повар",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2022-11-20T18:07:19.965Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "11",
+    "object_repr": "Отклик на Повар",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2022-11-21T16:42:01.897Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "2",
+    "object_repr": "ИП Надежда: Финансовый менеджер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2022-11-21T16:42:11.678Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "3",
+    "object_repr": "ИП Вася: Инженер ПТО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2022-11-21T17:42:14.122Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "4",
+    "object_repr": "ИП Надежда: Инспектор по взысканию",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f \\u0432\\u0430\\u043a\\u0430\\u043d\\u0441\\u0438\\u0438\", \"\\u0416\\u0435\\u043b\\u0430\\u0435\\u043c\\u0430\\u044f \\u0437\\u0430\\u0440\\u043f\\u043b\\u0430\\u0442\\u0430\", \"\\u0410\\u0432\\u0442\\u043e\\u0440\", \"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2022-11-21T17:42:51.140Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "5",
+    "object_repr": "root: Финансовый менеджер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f \\u0432\\u0430\\u043a\\u0430\\u043d\\u0441\\u0438\\u0438\", \"\\u0416\\u0435\\u043b\\u0430\\u0435\\u043c\\u0430\\u044f \\u0437\\u0430\\u0440\\u043f\\u043b\\u0430\\u0442\\u0430\", \"\\u0410\\u0432\\u0442\\u043e\\u0440\", \"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2022-11-21T17:45:28.854Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "6",
+    "object_repr": "root: Финансовый менеджер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f \\u0432\\u0430\\u043a\\u0430\\u043d\\u0441\\u0438\\u0438\", \"\\u0416\\u0435\\u043b\\u0430\\u0435\\u043c\\u0430\\u044f \\u0437\\u0430\\u0440\\u043f\\u043b\\u0430\\u0442\\u0430\", \"\\u0410\\u0432\\u0442\\u043e\\u0440\", \"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2022-11-21T17:46:18.052Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "resume"
+    ],
+    "object_id": "7",
+    "object_repr": "root: Инженер ПТО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f \\u0432\\u0430\\u043a\\u0430\\u043d\\u0441\\u0438\\u0438\", \"\\u0416\\u0435\\u043b\\u0430\\u0435\\u043c\\u0430\\u044f \\u0437\\u0430\\u0440\\u043f\\u043b\\u0430\\u0442\\u0430\", \"\\u0410\\u0432\\u0442\\u043e\\u0440\", \"Is public\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2022-11-21T17:52:06.922Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "12",
     "object_repr": "Отклик на Слесарь-электрик",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
