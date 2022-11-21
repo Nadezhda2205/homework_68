@@ -10,6 +10,7 @@
 
 <div class="card me-5" >
     <div class="card-body">
+      
     <h5 class="card-title" style="height: 4rem;">{{vacancy.name}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">Зарплата {{vacancy.salary}} тенге</h6>
       <p>{{ vacancy.description }}</p>
@@ -17,9 +18,40 @@
       <p>{{ vacancy.vacancy_category }}</p>
       <p>{{ vacancy.updated_at }}</p>
       <a href="{% url 'account_detail' vacancy.author.username %}" class="card-link">
-        <p class="card-text">{{vacancy.author}} </p>
+        <p class="card-text fst-italic">{{vacancy.author}} </p>
       </a>
+      <button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Откликнуться
+      </button>
+      
     </div>
   </div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Прикрепить резюме</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% csrf_token %}
+      {% comment %} {{ accout_update_form|bootstrap }} {% endcomment %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-secondary btn-sm ms-5">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+
+
 
 {% endblock %}
