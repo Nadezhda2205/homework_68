@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
+{% load static %}
+
 
 
 {% block title %}
@@ -20,9 +22,29 @@
       <a href="{% url 'account_detail' vacancy.author.username %}" class="card-link">
         <p class="card-text fst-italic">{{vacancy.author}} </p>
       </a>
-      <button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Откликнуться
-      </button>
+
+      {% if request.user.role.name == 'соискатель' %}
+
+
+        {% if vacancy in user.respond_vacancies.all %}
+
+          {% for response in user.responses.all %}
+            {% if response.vacancy == vacancy %}
+              <p>Вы откликнулись на эту вакансию</p>
+              <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
+                Чат
+              </a>
+            {% endif %}
+          {% endfor %}
+
+          <script src="{% static 'js/chat.js' %}"></script>
+        {% else %}
+          <button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Откликнуться
+          </button>
+        {% endif %}
+
+      {% endif %}
       
     </div>
   </div>
@@ -30,7 +52,7 @@
 
 <!-- Button trigger modal -->
 
-<!-- Modal -->
+<!-- Modal make respond -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -48,7 +70,7 @@
                   <option value="{{ resume.pk }}">{{ resume }}</option>
                 {% endfor %}
               </select>
-              <p><input name="message_text" class="" type="text" value=""></p>
+              <p><input name="message_text" class="" type="text" value="" required></p>
 
               <input class="btn btn-secondary" type="submit" value="Отправить">
           </div>
@@ -63,6 +85,25 @@
 
 </form>
 
+
+    <!-- Modal chat -->
+    <div class="modal fade" id="messagesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Написать сообщение</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id='message-modal-body'>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 {% endblock %}

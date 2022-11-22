@@ -3,10 +3,9 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView
 from django.urls import reverse 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import JsonResponse
-from django.core.serializers import serialize
+
 
 
 from main.models import Vacancy, Message, Response, Resume
@@ -103,7 +102,8 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('account_detail', kwargs={'slug': self.request.user.username})
+        url = self.request.META.get('HTTP_REFERER')
+        return url
 
     def dispatch(self, request, *args, **kwargs):
         '''

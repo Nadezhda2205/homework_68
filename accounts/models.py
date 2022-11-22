@@ -24,7 +24,7 @@ class Account(AbstractUser):
     email = models.EmailField()
     respond_vacancies = models.ManyToManyField(
         to='main.Vacancy',
-        verbose_name='Вакансии', 
+        verbose_name='Вакансии, на которые откликнулся', 
         related_name='applicants', 
         through='main.Response'
         )
