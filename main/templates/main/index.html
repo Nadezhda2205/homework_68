@@ -8,6 +8,16 @@
 {% block content %}
 <div class="row row-cols-3 row-cols-md-1 g-4">
 
+
+  <form action="" method="GET">
+    {% csrf_token %}
+  
+      {{ form }}
+
+    <input class="btn btn-secondary btn-sm" type="submit" value="Поиск">
+
+  </form>
+
 {% for vacancy in vacancies %}
 
 

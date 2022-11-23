@@ -30,13 +30,7 @@
 
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <form action="#" method="GET">
-            {% csrf_token %}
           
-            <input class="btn btn-secondary btn-sm" name="search" type="text">
-            <input class="btn btn-secondary btn-sm" type="submit" value="Поиск">
-
-          </form>
         </li>
         {% if user.is_authenticated %}
         <li class="cl_color">
