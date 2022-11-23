@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 from main.models import Vacancy, Message, Response, Resume
-from main.forms import MessageCreateForm
+from main.forms import MessageCreateForm, SearchForm
 
 
 class VacancyListView(ListView):
@@ -17,12 +17,31 @@ class VacancyListView(ListView):
     context_object_name = 'vacancies'
     model = Vacancy
 
+    def get(self, request, *args, **kwargs):
+        self.form = self.get_search_form()
+        self.search_value = self.get_search_value()
+        return super().get(request, *args, **kwargs)
+
+    def get_search_form(self):
+        return SearchForm(self.request.GET)
+
+    def get_search_value(self):
+        if self.form.is_valid():
+            return self.form.cleaned_data.get('search')
+        return None
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(object_list=object_list, **kwargs)
+        context['form'] = self.form
+        context['categories'] = Vacancy.objects.all()
+        return context
+
     def get_queryset(self):
-        '''возвращает список элементов queryset'''
         queryset = super().get_queryset()
         queryset = queryset.filter(is_public=True)
+        if self.search_value:
+            queryset = queryset.filter(name__iregex=self.search_value)
         return queryset
-   
 
 
 class VacancyCreateView(CreateView):
