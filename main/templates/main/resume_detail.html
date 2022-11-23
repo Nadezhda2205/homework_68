@@ -6,9 +6,15 @@
 {% block content %}
 
 <div>
-    <h6>Имя кандидата: {{resume.author.name}}</h6>
-    <h6>Категория резюме: {{resume.vacancy_category}}</h6>
-    <h6>Ожидаемая зарплата: {{resume.salary}}</h6>
+    <h1>{{resume.name}}</h1>
+    <h6><span style="color: blue; font-size: 16px;">Имя кандидата:</span> {{resume.author.name}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Ожидаемая зарплата:</span> {{resume.salary}} тнг</h6>
+    <h6><span style="color: blue; font-size: 16px;">Номер телефона: </span>{{resume.phone}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Почта email: </span>{{resume.email}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Телеграм: </span>{{resume.telegram}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Ссылка на LinkedIn:  </span>{{resume.linkedin}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Ссылка на Facebook: </span>{{resume.telegram}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Категория резюме: </span>{{resume.vacancy_category}}</h6>
 </div>
 <div>
 
