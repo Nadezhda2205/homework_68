@@ -16,6 +16,8 @@ class VacancyListView(ListView):
     template_name = 'main/index.html'
     context_object_name = 'vacancies'
     model = Vacancy
+    paginate_by = 20
+    paginate_orphans = 1
 
     def get(self, request, *args, **kwargs):
         self.form = self.get_search_form()
