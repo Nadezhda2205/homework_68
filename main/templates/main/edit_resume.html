@@ -8,18 +8,18 @@
     <div class='form'>
         {% csrf_token %}
         {{ form|bootstrap }}
-        <input type="submit" value="Изменить данные">
-        <a href="{% url 'account_detail' request.user.username %}" class="btn btn-primary" role="button">Отмена</a>
+        <input type="submit" class=" btn btn-secondary btn-sm mr-5" value="Изменить данные">
+        <a href="{% url 'account_detail' request.user.username %}" class="btn btn-secondary btn-sm mr-5" role="button">Отмена</a>
     </div>
 </form>
 <div>
      <span><a href="{% url 'add_education' resume.pk %}">
-        <button type="button" class="btn btn-primary" >
+        <button type="button" class="btn btn-primary btn-sm mr-5" >
         Добавить образование
       </button></a>
     </span>
     <span><a href="{% url 'add_experience' resume.pk %}">
-        <button type="button" class="btn btn-primary" >
+        <button type="button" class="btn btn-primary btn-sm mr-5" >
         Добавить опыт работы
       </button></a>
     </span>
