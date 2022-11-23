@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %}
+Детальный просмотр резюме
+{% endblock %}
+{% block content %}
+
+<div>
+    <h6>Имя кандидата: {{resume.author.name}}</h6>
+    <h6>Категория резюме: {{resume.vacancy_category}}</h6>
+    <h6>Ожидаемая зарплата: {{resume.salary}}</h6>
+</div>
+<div>
+
+    {% for experience in resume.experiences.all %}
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Организация</th>
+            <th scope="col">Должность</th>
+              <th scope="col">Обязанности</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>{{ experience.company }}</p></td>
+            <td>{{experience.position}}</td>
+              <td>{{experience.duties}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+<div>
+    {% for education in resume.educations.all %}
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Образование</th>
+            <th scope="col">Дата начала</th>
+              <th scope="col">Дата завершения</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>{{ education.description }}</p></td>
+            <td>{{education.begin_at}}</td>
+              <td>{{education.end_at}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+<div>
+  <a href="{% url 'account_detail' resume.author.username %}" class="card-link">
+        <p class="card-text fst-italic">Перейти к автору резюме {{resume.author}} </p>
+      </a>
+</div>
+<div>
+  <a href="{% url 'resume_list' %}" class="card-link">
+        <p class="card-text fst-italic">Перейти к списку резюме </p>
+      </a>
+</div>
+{% endblock %}

@@ -32,6 +32,16 @@ class UpdateResumeView(UpdateView):
             self.template_name = 'main/edit_resume.html'
         return context
 
+    def dispatch(self, request, *args, **kwargs):
+        if not self.get_object().author == request.user:
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
+
+class ResumeDetailView(DetailView):
+    template_name = 'main/resume_detail.html'
+    model = Resume
+    context_object_name = 'resume'
+
 
 class ResumesIndexView(ListView):
     template_name = 'accounts/detail_applicant.html'
@@ -60,11 +70,21 @@ class ResumeUpdateDateView(UpdateView):
         resume.save()
         return redirect('account_detail', resume.author.username)
 
+    def dispatch(self, request, *args, **kwargs):
+        if not self.get_object().author == request.user:
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
+
 class DeleteResumeView(DeleteView):
     model = Resume
     success_url = '/'
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
+
+    def dispatch(self, request, *args, **kwargs):
+        if not self.get_object().author == request.user:
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
 
 
 
