@@ -1,7 +1,7 @@
 from django.urls import path
 from main.view import UpdateResumeView, AddEducationView, CreateResumeView,UpdateResumeView, \
     ResumesIndexView, ResumeUpdateDateView, ResumePublicView, EditEducationView, DeleteEducationView, \
-    AddExperienceView, EditExperienceView, DeleteExperienceView, DeleteResumeView, ResumeListView
+    AddExperienceView, EditExperienceView, DeleteExperienceView, DeleteResumeView, ResumeListView, ResumeDetailView
 
 
 
@@ -17,6 +17,6 @@ urlpatterns = [
     path('resume/<int:pk>/add/experience/', AddExperienceView.as_view(), name='add_experience'),
     path('resume/<int:pk>/experience/edit', EditExperienceView.as_view(), name='edit_experience'),
     path('resume/<int:pk>/experience/delete', DeleteExperienceView.as_view(), name='delete_experience'),
-    
+    path('resume/<int:pk>/detail/', ResumeDetailView.as_view(), name='detail_resume'),
     path('resume/list', ResumeListView.as_view(), name='resume_list'),
 ]

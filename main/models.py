@@ -14,9 +14,29 @@ class VacancyCategory(models.Model):
 
 
 class Resume(models.Model):
+    name = models.CharField(max_length=100,
+                            verbose_name=('Название резюме'),
+                            blank=False)
+    telegram = models.CharField(max_length=100,
+                                verbose_name=('Телеграм'),
+                                blank=False)
+    email = models.EmailField(blank=False,
+                              verbose_name=('Почта email'))
+    phone = models.CharField(max_length=30,
+                             verbose_name=('Номер телефона'),
+                             blank=False)
+    facebook = models.CharField(max_length=100,
+                                verbose_name=('Ссылка на facebook'),
+                                blank=True)
+    linkedin = models.CharField(max_length=100,
+                                verbose_name=('Ссылка на linkedIn'),
+                                null=True,
+                                blank=True)
+
+
     vacancy_category = models.ForeignKey(
         'main.VacancyCategory', 
-        verbose_name=('Категория вакансии'), 
+        verbose_name=('Категория вакансии'),
         on_delete=models.CASCADE, 
         related_name='resumes',
         null=True,
@@ -31,7 +51,7 @@ class Resume(models.Model):
         on_delete=models.CASCADE
     )
     updated_at = models.DateTimeField(auto_now=True)
-    is_public = models.BooleanField(null=True, blank=False)
+    is_public = models.BooleanField(null=True, verbose_name='Опубликовано', blank=False)
 
 
     def __str__(self) -> str:

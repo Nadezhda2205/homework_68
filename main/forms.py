@@ -5,7 +5,7 @@ from main.models import Resume, Experience, Education
 class ResumeForm(forms.ModelForm):
     class Meta:
         model = Resume
-        fields = ('vacancy_category', 'salary', 'is_public')
+        fields = ('name','email','telegram','phone','linkedin','facebook','vacancy_category', 'salary', 'is_public')
 
 
 class EducationForm(forms.ModelForm):
