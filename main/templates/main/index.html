@@ -12,13 +12,20 @@
   <form action="" method="GET">
     {% csrf_token %}
   
-      {{ form }}
+    <input type="text" name="search_name">
 
+    <ul>
+      {% for category in categories %}
+        <input type="checkbox" id="check1" name="checks" value="{{ category.pk }}">
+        <label for="check1">{{ category.name }}</label>
+      {% endfor %}
+    </ul>
     <input class="btn btn-secondary btn-sm" type="submit" value="Поиск">
 
   </form>
 
-{% if request.user.role.id == 2 and request.user.is_authenticated%}
+
+{% comment %} {% if request.user.role.id == 2 and request.user.is_authenticated%} {% endcomment %}
 {% for vacancy in vacancies %}
 <div class="card me-5" style="width: 18rem;">
   <div class="card-body">
@@ -35,7 +42,7 @@
   </div>
 </div>
   {% endfor %}
-{% elif request.user.role.id == 1 and request.user.is_authenticated%}
+{% comment %} {% elif request.user.role.id == 1 and request.user.is_authenticated%}
   {% for resume in resumes%}
   <div class="card me-5" style="width: 18rem;">
   <div class="card-body">
@@ -52,7 +59,7 @@
   </div>
 </div>
   {% endfor %}
-  {%endif%}
+  {%endif%} {% endcomment %}
   {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}

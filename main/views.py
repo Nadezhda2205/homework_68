@@ -3,13 +3,13 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView
 from django.urls import reverse 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden, HttpResponseRedirect
+from django.http import HttpResponseForbidden
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-from main.models import Vacancy, Message, Response, Resume
-from main.forms import MessageCreateForm, SearchForm
+from main.models import Vacancy, Message, Response, Resume, VacancyCategory
+from main.forms import MessageCreateForm
 
 
 class VacancyListView(ListView):
@@ -20,30 +20,27 @@ class VacancyListView(ListView):
     paginate_orphans = 1
 
     def get(self, request, *args, **kwargs):
-        self.form = self.get_search_form()
-        self.search_value = self.get_search_value()
+        self.checks = self.request.GET.getlist('checks')
+        self.search_name = self.request.GET.get('search_name')
         return super().get(request, *args, **kwargs)
 
-    def get_search_form(self):
-        return SearchForm(self.request.GET)
-
-    def get_search_value(self):
-        if self.form.is_valid():
-            return self.form.cleaned_data.get('search_name')
-        return None
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=object_list, **kwargs)
-        context['form'] = self.form
-        context['categories'] = Vacancy.objects.all()
-        context['resumes'] = Resume.objects.filter(is_public=True)
+        context['categories'] = VacancyCategory.objects.all()
         return context
 
     def get_queryset(self):
         queryset = super().get_queryset()
         queryset = queryset.filter(is_public=True)
-        if self.search_value:
-            queryset = queryset.filter(name__iregex=self.search_value)
+
+        if self.search_name:
+            queryset = queryset.filter(name__iregex=self.search_name)
+
+        if self.checks:
+            search_category_list = VacancyCategory.objects.filter(pk__in=self.checks)
+            queryset = queryset.filter(vacancy_category__in=search_category_list)
+
         return queryset
 
 
