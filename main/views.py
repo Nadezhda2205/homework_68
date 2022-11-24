@@ -29,7 +29,7 @@ class VacancyListView(ListView):
 
     def get_search_value(self):
         if self.form.is_valid():
-            return self.form.cleaned_data.get('search')
+            return self.form.cleaned_data.get('search_name')
         return None
 
     def get_context_data(self, *, object_list=None, **kwargs):

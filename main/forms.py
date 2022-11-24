@@ -28,4 +28,4 @@ class MessageCreateForm(forms.ModelForm):
         
 
 class SearchForm(forms.Form):
-    search_т = forms.CharField(required=False, label='')
+    search_name = forms.CharField(required=False, label='')
