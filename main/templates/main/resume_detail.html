@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
+{% load static %}
+
 {% block title %}
 Детальный просмотр резюме
 {% endblock %}
+
 {% block content %}
 
 <div>
@@ -77,14 +80,24 @@
     {% endfor %}
 </div>
 
-<button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Откликнуться
-</button>
+
+
+<div>
+  <a href="{% url 'account_detail' resume.author.username %}" class="card-link">
+    <p class="card-text fst-italic">Перейти к автору резюме {{resume.author}} </p>
+  </a>
+</div>
+
+<div>
+  <a href="{% url 'resume_list' %}" class="card-link">
+    <p class="card-text fst-italic">Перейти к списку резюме </p>
+  </a>
+</div>
+
 
 
 
 {% if request.user.role.name == 'работодатель' %}
-
 
   {% if resume in user.respond_resumes.all %}
 
@@ -96,8 +109,7 @@
         </a>
       {% endif %}
     {% endfor %}
-
-    <script src="{% static 'js/chat.js' %}"></script>
+    
   {% else %}
   <button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Откликнуться
@@ -106,6 +118,7 @@
 
 {% endif %}
 
+<script src="{% static 'js/chat.js' %}"></script>
 
 <!-- Modal make respond -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -145,14 +158,6 @@
 
 
 
-<div>
-  <a href="{% url 'account_detail' resume.author.username %}" class="card-link">
-        <p class="card-text fst-italic">Перейти к автору резюме {{resume.author}} </p>
-      </a>
-</div>
-<div>
-  <a href="{% url 'resume_list' %}" class="card-link">
-        <p class="card-text fst-italic">Перейти к списку резюме </p>
-      </a>
-</div>
+
+
 {% endblock %}

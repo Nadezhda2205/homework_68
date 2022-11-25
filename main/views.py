@@ -146,9 +146,9 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         '''
         response_pk = self.kwargs.get('pk')
         response: Response = get_object_or_404(Response, pk=response_pk)
-        applicant_response = response.applicant
+        author_resume = response.resume.author
         author_vacancy = response.vacancy.author
-        if request.user == applicant_response or request.user == author_vacancy:
+        if request.user == author_resume or request.user == author_vacancy:
             return super().dispatch(request, *args, **kwargs)
         return self.handle_no_permission()
 

@@ -25,11 +25,10 @@
 
       {% if request.user.role.name == 'соискатель' %}
 
-
         {% if vacancy in user.respond_vacancies.all %}
 
-          {% for item in user.respond_vacancies.all %}
-            {% if item == vacancy %}
+          {% for response in user.responses.all %}
+            {% if response.vacancy == vacancy %}
               <p>Вы откликнулись на эту вакансию</p>
               <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
                 Чат
@@ -49,8 +48,6 @@
     </div>
   </div>
 
-
-<!-- Button trigger modal -->
 
 <!-- Modal make respond -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
