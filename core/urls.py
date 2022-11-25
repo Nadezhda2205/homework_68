@@ -16,6 +16,7 @@ from main.views import (
     ResponseCreateView
 )
 
+from main.view import json_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,5 +35,6 @@ urlpatterns = [
     path('applicant/', include('main.urls')),
 
     path('response/<int:pk>/message/create/', MessageCreateView.as_view(), name='message_create'),
-    path('response/<int:pk>/messages/', get_messages_view, name='messages_list')
+    path('response/<int:pk>/messages/', get_messages_view, name='messages_list'),
+    path('json-index/',json_index, name='json_index'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

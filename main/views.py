@@ -11,6 +11,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from main.models import Vacancy, Message, Response, Resume, VacancyCategory
 from main.forms import MessageCreateForm
 
+from main.forms import SearchForm
+
 
 class VacancyListView(ListView):
     template_name = 'main/index.html'
@@ -22,12 +24,22 @@ class VacancyListView(ListView):
     def get(self, request, *args, **kwargs):
         self.checks = self.request.GET.getlist('checks')
         self.search_name = self.request.GET.get('search_name')
+        self.form = self.get_search_form()
+        self.search_value = self.get_search_value()
         return super().get(request, *args, **kwargs)
 
+    def get_search_form(self):
+        return SearchForm(self.request.GET)
+
+    def get_search_value(self):
+        if self.form.is_valid():
+            return self.form.cleaned_data.get('search')
+        return None
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=object_list, **kwargs)
         context['categories'] = VacancyCategory.objects.all()
+        context['form'] = self.form
         return context
 
     def get_queryset(self):
@@ -159,4 +171,3 @@ class ResponseCreateView(CreateView):
 
  
         return redirect('vacancy_detail', pk=vacansy_pk)
-    

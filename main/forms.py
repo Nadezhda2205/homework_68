@@ -25,4 +25,7 @@ class MessageCreateForm(forms.ModelForm):
     class Meta:
         model = Message
         fields = ('text',)
-        
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=100, required=False,label="")
