@@ -29,7 +29,7 @@
       <a class="btn btn-secondary btn-sm ms-5" href="{% url 'vacancy_create' %}" class="nav-link" aria-current="page">Добавить вакансию</a>
       <a class="btn btn-secondary btn-sm ms-5" href="{% url 'resume_list' %}" class="nav-link" aria-current="page">Список резюме</a>
 
-      <!-- Modal -->
+      <!-- Modal update account-->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -57,7 +57,6 @@
 
   </div>
 </div>
-
 
 
 <h3>Список вакансий</h3>
@@ -101,12 +100,13 @@
           <div>Откликнулись</div>
           {% for response in vacancy.responses.all %}
           <div>
-            <a class="me-5"href="{% url 'account_detail' response.applicant.username %}">
-              {{ response.applicant.username }}
+            <a class="me-5"href="{% url 'account_detail' response.resume.author.username %}">
+              {{ response.resume.author.name }}
             </a>
             <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
               Чат
             </a>
+            <hr>
           </div>
           {% endfor %}
         {% endif %}
@@ -116,7 +116,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- Modal chat-->
     <div class="modal fade" id="messagesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -137,11 +137,8 @@
     </div>
 
 
-
-
-
   {% endif %}
 
-  <script src="{% static 'js/chat.js' %}"></script>
+<script src="{% static 'js/chat.js' %}"></script>
 
 {% endblock %}

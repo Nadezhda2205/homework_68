@@ -1,8 +1,20 @@
 from django.urls import path
-from main.view import UpdateResumeView, AddEducationView, CreateResumeView,UpdateResumeView, \
-    ResumesIndexView, ResumeUpdateDateView, ResumePublicView, EditEducationView, DeleteEducationView, \
-    AddExperienceView, EditExperienceView, DeleteExperienceView, DeleteResumeView, ResumeListView, ResumeDetailView
-
+from main.view import (
+    UpdateResumeView,
+    AddEducationView,
+    CreateResumeView,
+    UpdateResumeView,
+    ResumeUpdateDateView,
+    ResumePublicView,
+    EditEducationView,
+    DeleteEducationView,
+    AddExperienceView,
+    EditExperienceView,
+    DeleteExperienceView,
+    DeleteResumeView,
+    ResumeListView,
+    ResumeDetailView
+)
 
 
 urlpatterns = [

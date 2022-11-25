@@ -9,11 +9,17 @@
     <h1>{{resume.name}}</h1>
     <h6><span style="color: blue; font-size: 16px;">Имя кандидата:</span> {{resume.author.name}}</h6>
     <h6><span style="color: blue; font-size: 16px;">Ожидаемая зарплата:</span> {{resume.salary}} тнг</h6>
-    <h6><span style="color: blue; font-size: 16px;">Номер телефона: </span>{{resume.phone}}</h6>
-    <h6><span style="color: blue; font-size: 16px;">Почта email: </span>{{resume.email}}</h6>
-    <h6><span style="color: blue; font-size: 16px;">Телеграм: </span>{{resume.telegram}}</h6>
-    <h6><span style="color: blue; font-size: 16px;">Ссылка на LinkedIn:  </span>{{resume.linkedin}}</h6>
-    <h6><span style="color: blue; font-size: 16px;">Ссылка на Facebook: </span>{{resume.telegram}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Номер телефона: </span>{{resume.author.phone}}</h6>
+    <h6><span style="color: blue; font-size: 16px;">Почта email: </span>{{resume.author.email}}</h6>
+    {% if resume.author.telegram %}
+      <h6><span style="color: blue; font-size: 16px;">Телеграм: </span>{{resume.author.telegram}}</h6>
+    {% endif %}
+    {% if resume.author.linkedin %}
+      <h6><span style="color: blue; font-size: 16px;">Ссылка на LinkedIn:  </span>{{resume.author.linkedin}}</h6>
+    {% endif %}
+    {% if resume.author.facebook %}
+      <h6><span style="color: blue; font-size: 16px;">Ссылка на Facebook: </span>{{resume.author.facebook}}</h6>
+    {% endif %}
     <h6><span style="color: blue; font-size: 16px;">Категория резюме: </span>{{resume.vacancy_category}}</h6>
 </div>
 <div>
@@ -70,6 +76,75 @@
 </div>
     {% endfor %}
 </div>
+
+<button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Откликнуться
+</button>
+
+
+
+{% if request.user.role.name == 'работодатель' %}
+
+
+  {% if resume in user.respond_resumes.all %}
+
+    {% for item in user.respond_resumes.all %}
+      {% if item == resume %}
+        <p>Вы откликнулись на это резюме</p>
+        <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
+          Чат
+        </a>
+      {% endif %}
+    {% endfor %}
+
+    <script src="{% static 'js/chat.js' %}"></script>
+  {% else %}
+  <button type="button" class="btn btn-secondary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Откликнуться
+  </button>
+{% endif %}
+
+{% endif %}
+
+
+<!-- Modal make respond -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Прикрепить резюме</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'response_create' %}" method='POST'>
+          <div class='form'>
+              {% csrf_token %}
+      
+              <select name="vacancy_pk">
+                {% for vacancy in user.vacancies.all %}
+                  <option value="{{ vacancy.pk }}">{{ vacancy }}</option>
+                {% endfor %}
+              </select>
+              <input name="resume_pk" value="{{resume.pk}}" type="hidden">
+
+              <p><input name="message_text" class="" type="text" value="" required></p>
+
+              <input class="btn btn-secondary" type="submit" value="Отправить">
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+
+
+
+
 <div>
   <a href="{% url 'account_detail' resume.author.username %}" class="card-link">
         <p class="card-text fst-italic">Перейти к автору резюме {{resume.author}} </p>

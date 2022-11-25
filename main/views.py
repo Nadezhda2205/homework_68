@@ -7,11 +7,8 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-
 from main.models import Vacancy, Message, Response, Resume, VacancyCategory
-from main.forms import MessageCreateForm
-
-from main.forms import SearchForm
+from main.forms import MessageCreateForm, SearchForm
 
 
 class VacancyListView(ListView):
@@ -76,6 +73,7 @@ class VacancyCreateView(CreateView):
 
         return super().form_valid(form)
 
+
 class VacancyDetailView(DetailView):
     template_name = 'main/detail_vacancy.html'
     model = Vacancy
@@ -111,6 +109,7 @@ def vacancy_date_update_view(request, pk):
         return HttpResponseForbidden()
     vacancy.save()
     return redirect('account_detail', vacancy.author.username)
+
 
 def get_messages_view(request, pk):
     response = get_object_or_404(Response, pk=pk)
@@ -158,16 +157,16 @@ class ResponseCreateView(CreateView):
     model = Response
 
     def post(self, request, *args, **kwargs):
-        vacansy_pk = kwargs.get('pk')
-        vacancy = get_object_or_404(Vacancy, pk=vacansy_pk)
-        applicant = request.user
+        vacansy_pk = request.POST.get('vacancy_pk')
+        vacancy: Vacancy = get_object_or_404(Vacancy, pk=vacansy_pk)
         resume_pk = request.POST.get('resume_pk')
-        resume = get_object_or_404(Resume, pk=resume_pk)
-        response = Response.objects.create(vacancy=vacancy, applicant=applicant, resume=resume)
+        resume: Resume = get_object_or_404(Resume, pk=resume_pk)
+        author = request.user
+        response = Response.objects.create(vacancy=vacancy, author=author, resume=resume)
         
         message_text = request.POST.get('message_text')
-        Message.objects.create(response=response, author=applicant, text=message_text)
+        Message.objects.create(response=response, author=author, text=message_text)
+        
+        url = self.request.META.get('HTTP_REFERER')
 
-
- 
-        return redirect('vacancy_detail', pk=vacansy_pk)
+        return redirect(url)

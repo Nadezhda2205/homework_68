@@ -18,6 +18,7 @@ from main.views import (
 
 from main.view import json_index
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', VacancyListView.as_view(), name='index'),
@@ -30,7 +31,7 @@ urlpatterns = [
     path('vacancy/<int:pk>', VacancyDetailView.as_view(), name='vacancy_detail'),
     path('vacancy/<int:pk>/update', VacancyUpdateView.as_view(), name='vacancy_update'),
     path('vacancy/<int:pk>/update_date', vacancy_date_update_view, name='vacancy_date_update'),
-    path('vacancy/<int:pk>/response/create', ResponseCreateView.as_view(), name='response_create'),
+    path('response/create/', ResponseCreateView.as_view(), name='response_create'),
 
     path('applicant/', include('main.urls')),
 

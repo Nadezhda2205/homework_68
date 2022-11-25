@@ -16,8 +16,8 @@
     {%endif%}
   </div>
   <div class = "col-md-7 col-sm-6">
-    <h3>{{ account.name }}</h3>
-    {% if account == user %}
+  <h3>{{ account.name }}</h3>
+  {% if account == user %}
 
     <form action="{% url 'account_update' account.username %}" method="POST" enctype="multipart/form-data">
       <!-- Button trigger modal -->
@@ -46,95 +46,134 @@
       </div>
 
     </form>
-    {% endif %}
-    {% if account.description %}
-      <p>{{ account.description }}</p>
-    {% endif %}
-      {% if account == user %}
+  {% endif %}
+  {% if account.description %}
+    <p>{{ account.description }}</p>
+  {% endif %}
+  {% if account == user %}
     <a href="{% url 'create_resume' %}">
       <button type="button" class="btn btn-secondary btn-sm mt-3" >
         Создать резюме
       </button>
     </a>
-      {% endif %}
+  {% endif %}
 
-      <h3>Список вакансий</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Резюме</th>
-        <th scope="col">Зарплата</th>
-        {% if account == user %}
-        <th scope="col">Действия</th>
-        <th scope="col">Изменения</th>
-      {% endif %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for resume in account.resumes.all %}
-      {% if account == user or resume.is_public %}
+  <h3>Список вакансий</h3>
+    <table class="table">
+      <thead>
         <tr>
-          <td>
-            <div>
-            <a href="{% url 'detail_resume' resume.pk %}">{{ resume.vacancy_category }}</a>
-              <div>{{resume.updated_at}}</div>
-            </div>
-
-          </td>
-          <td>{{ resume.salary }} тенге</td>
+          <th scope="col">Резюме</th>
+          <th scope="col">Зарплата</th>
           {% if account == user %}
-            <td><a href="">
-              <div class="card-link">
-            <form action="{% url 'resume_update_date' resume.pk %}" method="POST">
-                {% csrf_token %}
-                <div id="container">
-                    <button type="submit" class="btn btn-secondary btn-sm mr-5">Обновить</button>
+            <th scope="col">Действия</th>
+            <th scope="col">Изменения</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for resume in account.resumes.all %}
+          {% if account == user or resume.is_public %}
+            <tr>
+              <td>
+                <div>
+                  <a href="{% url 'detail_resume' resume.pk %}">{{ resume.vacancy_category }}</a>
+                  <div>{{resume.updated_at}}</div>
                 </div>
-            </form>
-        </div>
-            </a>
-              <a href="">
-              <div class="card-link">
-            <form action="{% url 'resume_public' resume.pk %}" method="POST">
-                {% csrf_token %}
-                <div >
-                    {% if resume.is_public %}
-                    <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Не публиковать</button>
-                    {% else%}
-                    <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Опубликовать</button>
-                    {% endif %}
-                </div>
-            </form>
-        </div>
-            </a>
-            </td>
+              </td>
+              <td>{{ resume.salary }} тенге</td>
+                {% if account == user %}
+                  <td>
+                    <a href="">
+                      <div class="card-link">
+                        <form action="{% url 'resume_update_date' resume.pk %}" method="POST">
+                          {% csrf_token %}
+                          <div id="container">
+                            <button type="submit" class="btn btn-secondary btn-sm mr-5">Обновить</button>
+                          </div>
+                        </form>
+                      </div>
+                    </a>
+                    <a href="">
+                      <div class="card-link">
+                        <form action="{% url 'resume_public' resume.pk %}" method="POST">
+                          {% csrf_token %}
+                          <div>
+                            {% if resume.is_public %}
+                              <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Не публиковать</button>
+                            {% else%}
+                              <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Опубликовать</button>
+                            {% endif %}
+                          </div>
+                        </form>
+                      </div>
+                    </a>
+                  </td>
 
-          <td>
-            <a href="">
-              <div class="card-link" >
-                <form action="{% url 'delete_resume' resume.pk %}" method="POST">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-secondary btn-sm mr-5">Удалить</button>
-                </form>
-        </div>
-            </a>
-            <a>
-               <a href="{% url 'edit_resume' resume.pk %}" role="button" class="btn card-link btn-secondary btn-sm mt-3">Редактировать</a>
-            </a>
-          </td>
+                  <td>
+                    <a href="">
+                      <div class="card-link" >
+                        <form action="{% url 'delete_resume' resume.pk %}" method="POST">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-secondary btn-sm mr-5">Удалить</button>
+                        </form>
+                      </div>
+                    </a>
+                    <a href="{% url 'edit_resume' resume.pk %}" role="button" class="btn card-link btn-secondary btn-sm mt-3">Редактировать</a>
+                  </td>
 
+                {% endif %}
+
+            </tr>
           {% endif %}
 
-        </tr>
-      {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
 
-      {% endfor %}
-    </tbody>
-  </table>
+    {% if account == user %}
+      <h3>Список откликов на резюме</h3>
+      <div>
+        {% for resume in account.resumes.all %}
+          {% if resume.responses.all %}
+            <div>Резюме: {{ resume.name }}</div>
+            <div>Откликнулись</div>
+            {% for response in resume.responses.all %}
+            <div>
+              <a class="me-5"href="{% url 'account_detail' response.vacancy.author.username %}">
+                {{ response.vacancy.author.name }}
+              </a>
+              <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
+                Чат
+              </a>
+              <hr>
+            </div>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        <hr>
+      </div>
 
+    <!-- Modal chat-->
+    <div class="modal fade" id="messagesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Написать сообщение</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id='message-modal-body'>
 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-secondary btn-sm ms-5">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+  {% endif %}
 
-
+<script src="{% static 'js/chat.js' %}"></script>
 
 {% endblock %}

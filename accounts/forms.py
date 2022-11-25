@@ -3,7 +3,6 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 
 
-
 class LoginForm(forms.Form):
     '''форма для входа'''
     username = forms.CharField(required=True, label='Логин')

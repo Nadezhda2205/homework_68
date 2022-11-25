@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
 
-{% comment %} {% load static %} {% endcomment %}
-
-
 {% block content %}
 
 <form method="POST" action="{% url 'register' %}" enctype="multipart/form-data">
@@ -27,4 +24,5 @@ $('select').on('change', function () {
      }
  })
 </script>
+
 {% endblock %}

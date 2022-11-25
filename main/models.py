@@ -17,23 +17,7 @@ class Resume(models.Model):
     name = models.CharField(max_length=100,
                             verbose_name=('Название резюме'),
                             blank=False)
-    telegram = models.CharField(max_length=100,
-                                verbose_name=('Телеграм'),
-                                blank=False)
-    email = models.EmailField(blank=False,
-                              verbose_name=('Почта email'))
-    phone = models.CharField(max_length=30,
-                             verbose_name=('Номер телефона'),
-                             blank=False)
-    facebook = models.CharField(max_length=100,
-                                verbose_name=('Ссылка на facebook'),
-                                blank=True)
-    linkedin = models.CharField(max_length=100,
-                                verbose_name=('Ссылка на linkedIn'),
-                                null=True,
-                                blank=True)
-
-
+   
     vacancy_category = models.ForeignKey(
         'main.VacancyCategory', 
         verbose_name=('Категория вакансии'),
@@ -52,7 +36,6 @@ class Resume(models.Model):
     )
     updated_at = models.DateTimeField(auto_now=True)
     is_public = models.BooleanField(null=True, verbose_name='Опубликовано', blank=False)
-
 
     def __str__(self) -> str:
         return f'{self.author}: {self.vacancy_category}'
@@ -102,7 +85,6 @@ class Education(models.Model):
         verbose_name_plural = 'Образование'
 
 
-
 class Vacancy(models.Model):
     name = models.CharField(max_length=100)
     salary = models.PositiveIntegerField(verbose_name='Зарплата', null=True)
@@ -139,9 +121,9 @@ class Response(models.Model):
         on_delete=models.CASCADE, 
         related_name='responses' 
     )
-    applicant = models.ForeignKey(
+    author = models.ForeignKey(
         'accounts.Account', 
-        verbose_name=('Соискатель'), 
+        verbose_name=('Автор'), 
         on_delete=models.CASCADE, 
         related_name='responses' 
     )
@@ -159,7 +141,6 @@ class Response(models.Model):
     class Meta():
         verbose_name = 'Отклик'
         verbose_name_plural = 'Отклики'
-
 
     
 class Message(models.Model):
@@ -184,5 +165,3 @@ class Message(models.Model):
     class Meta():
         verbose_name = 'Сообщение'
         verbose_name_plural = 'Сообщения'
-
-

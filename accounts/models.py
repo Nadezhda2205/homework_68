@@ -28,6 +28,12 @@ class Account(AbstractUser):
         related_name='applicants', 
         through='main.Response'
         )
+    respond_resumes = models.ManyToManyField(
+        to='main.Resume',
+        verbose_name='Резюме, на которые откликнулся', 
+        related_name='employers', 
+        through='main.Response'
+        )
 
     sex = models.CharField(
         choices=SEX_CHOICES,
@@ -44,4 +50,3 @@ class Account(AbstractUser):
     
     def __str__(self) -> str:
         return self.name
-

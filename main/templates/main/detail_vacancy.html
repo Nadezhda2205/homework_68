@@ -28,8 +28,8 @@
 
         {% if vacancy in user.respond_vacancies.all %}
 
-          {% for response in user.responses.all %}
-            {% if response.vacancy == vacancy %}
+          {% for item in user.respond_vacancies.all %}
+            {% if item == vacancy %}
               <p>Вы откликнулись на эту вакансию</p>
               <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
                 Чат
@@ -61,7 +61,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="{% url 'response_create' vacancy.pk %}" method='POST'>
+        <form action="{% url 'response_create' %}" method='POST'>
           <div class='form'>
               {% csrf_token %}
       
@@ -70,6 +70,7 @@
                   <option value="{{ resume.pk }}">{{ resume }}</option>
                 {% endfor %}
               </select>
+              <input name="vacancy_pk" value="{{vacancy.pk}}" type="hidden">
               <p><input name="message_text" class="" type="text" value="" required></p>
 
               <input class="btn btn-secondary" type="submit" value="Отправить">

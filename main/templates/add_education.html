@@ -12,8 +12,8 @@
     <div class='form'>
         {% csrf_token %}
         {{ form|bootstrap }}
-        <input type="submit" value="Создать образование">
-        <a href="{% url 'edit_resume' resume.pk %}" class="btn btn-primary" role="button">Отмена</a>
+        <input type="submit" value="Добавить образование" class="btn btn-secondary btn-sm mt-3 ms-3">
+        <a href="{% url 'edit_resume' resume.pk %}" class="btn btn-secondary btn-sm mt-3 ms-3" role="button">Отмена</a>
     </div>
 </form>
 <div>

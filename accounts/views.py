@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, DetailView, UpdateView
 from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
@@ -7,13 +6,8 @@ from django.http import HttpResponseNotFound
 from django.urls import reverse 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-
-
-
 from accounts.forms import LoginForm, CustomUserСreationForm, AccoutUpdateForm
 from accounts.models import Account
-
-from main.models import Resume, Vacancy
 
 
 class LoginView(TemplateView):
@@ -93,7 +87,6 @@ class AccountDetailView(DetailView):
 
 class AccountUpdateView(LoginRequiredMixin, UpdateView):
     '''редактирование аккаунта работодателя/соискателя'''
-    template_name = 'account/update_employer.html'
     model = get_user_model()
     form_class = AccoutUpdateForm
 
@@ -107,5 +100,3 @@ class AccountUpdateView(LoginRequiredMixin, UpdateView):
         if not self.get_object() == request.user:
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
-
-
