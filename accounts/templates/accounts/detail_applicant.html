@@ -21,7 +21,7 @@
 
     <form action="{% url 'account_update' account.username %}" method="POST" enctype="multipart/form-data">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Редактировать профиль
       </button>
 
@@ -52,7 +52,7 @@
     {% endif %}
       {% if account == user %}
     <a href="{% url 'create_resume' %}">
-      <button type="button" class="btn btn-secondary btn-sm ms-5" >
+      <button type="button" class="btn btn-secondary btn-sm mt-3" >
         Создать резюме
       </button>
     </a>
@@ -99,9 +99,9 @@
                 {% csrf_token %}
                 <div >
                     {% if resume.is_public %}
-                    <button type="submit" id="public" class="btn btn-secondary btn-sm mr-5">Не публиковать</button>
+                    <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Не публиковать</button>
                     {% else%}
-                    <button type="submit" id="public" class="btn btn-secondary btn-sm mr-5">Опубликовать</button>
+                    <button type="submit" id="public" class="btn btn-secondary btn-sm mt-3">Опубликовать</button>
                     {% endif %}
                 </div>
             </form>
@@ -119,7 +119,7 @@
         </div>
             </a>
             <a>
-               <a href="{% url 'edit_resume' resume.pk %}" role="button" class="btn card-link btn-secondary btn-sm mr-5">Редактировать</a>
+               <a href="{% url 'edit_resume' resume.pk %}" role="button" class="btn card-link btn-secondary btn-sm mt-3">Редактировать</a>
             </a>
           </td>
 
