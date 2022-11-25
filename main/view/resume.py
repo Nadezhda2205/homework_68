@@ -1,10 +1,12 @@
 from datetime import datetime
 
-from django.urls import reverse_lazy
+from django.http import HttpResponse, HttpResponseNotAllowed, JsonResponse
 from django.views.generic import CreateView, UpdateView, DetailView, ListView, DeleteView
 from django.shortcuts import redirect, get_object_or_404
-from main.forms import ResumeForm, EducationForm
+from main.forms import ResumeForm, EducationForm, SearchForm
 from main.models import Resume, Education, Experience
+
+from main.models import Vacancy
 
 
 class CreateResumeView(CreateView):
@@ -106,5 +108,11 @@ class ResumePublicView(UpdateView):
         return redirect('account_detail', resume.author.username)
 
 
+def json_index(request, *args, **kwargs):
+    if request.method == 'GET':
+        search = request.GET.get('search')
+        vacancies = Vacancy.objects.filter(name__icontains=search) if search else Vacancy.objects.all()
+        return JsonResponse(list(vacancies.values(*('id', 'name', 'salary'))), safe=False)
+    return JsonResponse({"data": "ничего не найдено"})
 
 

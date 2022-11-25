@@ -6,13 +6,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="row row-cols-3 row-cols-md-1 g-4">
-
-
+<div>
+   {% include 'search.html' %}
+ </div>
   <form action="" method="GET">
-    {% csrf_token %}
-  
-    <input type="text" name="search_name">
 
     <ul>
       {% for category in categories %}
@@ -20,10 +17,10 @@
         <label for="check1">{{ category.name }}</label>
       {% endfor %}
     </ul>
-    <input class="btn btn-secondary btn-sm" type="submit" value="Поиск">
+    <input class="btn btn-secondary btn-sm" type="submit" value="Применить фильтр по категориям">
 
   </form>
-
+<div class="row row-cols-3 row-cols-md-1 g-4" id="articles">
 
 {% comment %} {% if request.user.role.id == 2 and request.user.is_authenticated%} {% endcomment %}
 {% for vacancy in vacancies %}

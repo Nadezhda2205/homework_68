@@ -1,0 +1,55 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% bootstrap_form form %}
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    let search = $('#id_search');
+    let url = 'http://localhost:8000/json-index/?search='
+
+    let addArticle = function (article, container){
+        let divI = document.createElement('div');
+        divI.className="row row-cols-3 row-cols-md-1 g-4";
+        let div1 = document.createElement('div');
+        div1.className="card me-5";
+        div1.style.cssText = 'width: 18rem;';
+        let div2 = document.createElement('div');
+        div2.className="card-body";
+        let name_a = document.createElement('a');
+        name_a.className="card-link";
+        name_a.style.cssText="height: 4rem;";
+        let nameh5 = document.createElement('h5');
+        nameh5.className="card-title";
+        nameh5.innerText=`${article.name}`;
+        let salary = document.createElement('h6');
+        salary.className="card-subtitle mb-2 text-muted";
+        salary.innerText=`${article.salary}`;
+        $(name_a).attr('href', `http://localhost:8000/vacancy/${article.id}`);
+        divI.appendChild(div1);
+        div1.appendChild(div2);
+        name_a.append(nameh5);
+        div2.append(name_a);
+        div2.append(salary);
+        container.append(divI);
+    }
+    renderResults = function(articles){
+        let article_container = $('#articles');
+        article_container.empty();
+        for(let article of articles){
+            addArticle(article, article_container);
+        }
+    }
+    let getArticles = function (){
+        let value = search.val();
+        $.ajax({
+            url: url + value
+        }).done(
+            function (data){
+                renderResults(data);
+            }
+        )
+    }
+    search.on('keyup', getArticles);
+
+
+</script>
