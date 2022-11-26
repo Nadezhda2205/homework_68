@@ -101,8 +101,8 @@
 
   {% if resume in user.respond_resumes.all %}
 
-    {% for item in user.respond_resumes.all %}
-      {% if item == resume %}
+    {% for response in user.responses.all %}
+      {% if response.resume == resume %}
         <p>Вы откликнулись на это резюме</p>
         <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
           Чат
@@ -155,6 +155,25 @@
 
 </form>
 
+
+    <!-- Modal chat -->
+    <div class="modal fade" id="messagesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Написать сообщение</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id='message-modal-body'>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm ms-5" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
