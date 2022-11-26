@@ -1,14 +1,6 @@
 [
 {
   "model": "sessions.session",
-  "pk": "elgcs7musgg38sl6pqroo0mbbiex2blq",
-  "fields": {
-    "session_data": ".eJxVjMsOgjAQRf-la9MUKNPWpXu_gcyjY1EDCYWV8d-VhIVu7znnvsyA21qGreZlGMWcTTCn342QH3nagdxxus2W52ldRrK7Yg9a7XWW_Lwc7t9BwVq-NQQgRY8KXQbwhNBQzsLgu4adS9ph4shOXOr7NmijMUaSpOBbYSXz_gD-jzil:1oyee9:JgXDgHPH1R8yHA4pEWZMfFvyHewrWXcsmgFWIekmwOc",
-    "expire_date": "2022-12-09T19:46:01.679Z"
-  }
-},
-{
-  "model": "sessions.session",
   "pk": "k6djoumjjwulvu5dnhepqt6qbsmjjmir",
   "fields": {
     "session_data": ".eJxVjMsOgjAQRf-la9MUKNPWpXu_gcyjY1EDCYWV8d-VhIVu7znnvsyA21qGreZlGMWcTTCn342QH3nagdxxus2W52ldRrK7Yg9a7XWW_Lwc7t9BwVq-NQQgRY8KXQbwhNBQzsLgu4adS9ph4shOXOr7NmijMUaSpOBbYSXz_gD-jzil:1oydsd:LL17iPhV5mk3QYyA-sR7K-PsOueuIYdHMM-ZpXk2wVE",
@@ -21,6 +13,22 @@
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-rTempOcM1trr4ABypDipEHeHSCmgfTPzXiLStta49bLEicVZWHH63RLlR2k74Du12yzz3NZlSnJX5EG7vM5cnpfD_Tuo1Ou31jaAchkQE7IiBewdjoERgbQ3LhQViEZDJiSyUAAGh6F4yzh4o1G8P77hNss:1oydsI:9FWwuTE_4bnVVZQAnjdk4Sd1761uF-407CbpDPr5-Zw",
     "expire_date": "2022-12-09T18:56:34.823Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "taignn7xqnrem0l3dexmcauqfq7tj3os",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln2-k9JnzNY67WDA8iR4qRC3J1ESgHVSPPezJtF3NYat16WOGV2ZYFdfruE9CztAPmB7T5zmtu6TIkfCj9p58Ocy-t2un8HFXvd10opYY0G50GiTZrkCMkEb6RzCDgiCS2VtCLRHhCCR53AZ4AgwJNjny-oGTY_:1oykZh:khCo8TxdpAKdMqRM05_MefX0KRqOzr45dAbFKO1TPn4",
+    "expire_date": "2022-12-10T02:05:49.987Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v2vzh84hm376mdmb9jniob6wiuxl3ngf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pC2DDB16d4zEJgZpGpoUtqV8e7apAvd_vfef6kQt7WErckSJlZnZdXpd0uRHlJ3wPdYb7Omua7LlPSu6IM2fZ1ZnpfD_TsosZVv3WEewQ_I1hsUAzBQ7sQnhyCmNx4ljYyIESMgEfQ5OcsWHGa0JKDeH8hbN3g:1oykdZ:0gg9XEwlyI0QXY0Zgmz2dkYvKjUtfDzErATWXbv_DyQ",
+    "expire_date": "2022-12-10T02:09:49.164Z"
   }
 },
 {
@@ -49,7 +57,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$JryFQwX6rdH43NdiDo6tKk$Fpw0tgNwhNuGRJd8diVdshy8wFg62+Ej5X7KqTFdgdg=",
-    "last_login": "2022-11-25T16:40:02.378Z",
+    "last_login": "2022-11-26T02:01:34.501Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -103,7 +111,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$0n120edrpzk8bbShNBcwZR$0qoSa6E+rlufI7KgLeCqWLLgwVkfLQXqeGD+bChsS6o=",
-    "last_login": "2022-11-25T19:30:26.767Z",
+    "last_login": "2022-11-26T01:14:27.486Z",
     "is_superuser": false,
     "username": "user_1",
     "first_name": "",
@@ -157,7 +165,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$Lg3rzws8cEGQHXma1SW1Bp$rvWYTTN/TdMSyfwaK02TxXDkLBJofK9oatGGNXJLp+A=",
-    "last_login": "2022-11-25T17:04:20.903Z",
+    "last_login": "2022-11-26T02:09:49.164Z",
     "is_superuser": false,
     "username": "sdek",
     "first_name": "",
@@ -211,7 +219,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$LrQSRPsNZ1Frd6bMqrv7Jx$yn+qmFa/ymIE/iE+F+G3wS4xvZpbOHgL3LvlFXs1DCU=",
-    "last_login": "2022-11-25T19:46:01.674Z",
+    "last_login": "2022-11-26T01:58:16.553Z",
     "is_superuser": false,
     "username": "rbk",
     "first_name": "",
@@ -265,7 +273,7 @@
   "model": "accounts.account",
   "fields": {
     "password": "pbkdf2_sha256$390000$ONMxk3ylHXJLai0Ie9LfYZ$FLBxWiVokHHS/iCjcI0Td4lWp1I4CYc3ma6Z7A8SRI8=",
-    "last_login": "2022-11-25T19:35:11.178Z",
+    "last_login": "2022-11-26T02:05:49.982Z",
     "is_superuser": false,
     "username": "user11",
     "first_name": "",
@@ -404,6 +412,20 @@
       "user11"
     ],
     "updated_at": "2022-11-25T19:36:45.550Z",
+    "is_public": true
+  }
+},
+{
+  "model": "main.resume",
+  "pk": 6,
+  "fields": {
+    "name": "Специалист широкого профиля",
+    "vacancy_category": 3,
+    "salary": 1000000,
+    "author": [
+      "user11"
+    ],
+    "updated_at": "2022-11-26T02:08:47.973Z",
     "is_public": true
   }
 },
@@ -719,30 +741,6 @@
 },
 {
   "model": "main.response",
-  "pk": 1,
-  "fields": {
-    "vacancy": 16,
-    "author": [
-      "root"
-    ],
-    "resume": 1,
-    "created_at": "2022-11-25T17:56:39.685Z"
-  }
-},
-{
-  "model": "main.response",
-  "pk": 2,
-  "fields": {
-    "vacancy": 15,
-    "author": [
-      "root"
-    ],
-    "resume": 1,
-    "created_at": "2022-11-25T18:00:15.289Z"
-  }
-},
-{
-  "model": "main.response",
   "pk": 3,
   "fields": {
     "vacancy": 15,
@@ -791,18 +789,6 @@
 },
 {
   "model": "main.response",
-  "pk": 7,
-  "fields": {
-    "vacancy": 16,
-    "author": [
-      "petrov"
-    ],
-    "resume": 4,
-    "created_at": "2022-11-25T18:46:26.079Z"
-  }
-},
-{
-  "model": "main.response",
   "pk": 8,
   "fields": {
     "vacancy": 15,
@@ -838,27 +824,27 @@
   }
 },
 {
-  "model": "main.message",
-  "pk": 1,
+  "model": "main.response",
+  "pk": 11,
   "fields": {
-    "response": 1,
+    "vacancy": 16,
     "author": [
-      "user_1"
+      "rbk"
     ],
-    "text": "Добрый день, рассмотрите резюме",
-    "created_at": "2022-11-25T17:56:39.691Z"
+    "resume": 2,
+    "created_at": "2022-11-26T01:15:57.764Z"
   }
 },
 {
-  "model": "main.message",
-  "pk": 2,
+  "model": "main.response",
+  "pk": 14,
   "fields": {
-    "response": 2,
+    "vacancy": 11,
     "author": [
-      "user_1"
+      "user11"
     ],
-    "text": "Добрый лень",
-    "created_at": "2022-11-25T18:00:15.295Z"
+    "resume": 6,
+    "created_at": "2022-11-26T02:09:18.967Z"
   }
 },
 {
@@ -907,30 +893,6 @@
     ],
     "text": "Добрый день, рассмотрите резюме",
     "created_at": "2022-11-25T18:21:32.764Z"
-  }
-},
-{
-  "model": "main.message",
-  "pk": 7,
-  "fields": {
-    "response": 7,
-    "author": [
-      "petrov"
-    ],
-    "text": "Добрый день",
-    "created_at": "2022-11-25T18:46:26.079Z"
-  }
-},
-{
-  "model": "main.message",
-  "pk": 8,
-  "fields": {
-    "response": 1,
-    "author": [
-      "rbk"
-    ],
-    "text": "Ok",
-    "created_at": "2022-11-25T19:29:43.589Z"
   }
 },
 {
@@ -1015,6 +977,42 @@
     ],
     "text": "Пойдете к нам?",
     "created_at": "2022-11-25T19:50:22.245Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 18,
+  "fields": {
+    "response": 8,
+    "author": [
+      "rbk"
+    ],
+    "text": "ок",
+    "created_at": "2022-11-26T01:12:55.896Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 20,
+  "fields": {
+    "response": 11,
+    "author": [
+      "rbk"
+    ],
+    "text": "Просим, просим",
+    "created_at": "2022-11-26T01:15:57.770Z"
+  }
+},
+{
+  "model": "main.message",
+  "pk": 24,
+  "fields": {
+    "response": 14,
+    "author": [
+      "user11"
+    ],
+    "text": "Предлагаю себя",
+    "created_at": "2022-11-26T02:09:18.972Z"
   }
 },
 {
@@ -1213,6 +1211,96 @@
     "object_repr": "связь",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-11-26T01:57:41.263Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "13",
+    "object_repr": "Отклик на Менеджер Управления кредитного администрирования проектов Филиальной сети",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-11-26T01:57:41.270Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "12",
+    "object_repr": "Отклик на Менеджер Управления кредитного администрирования проектов Филиальной сети",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-11-26T01:57:41.275Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "2",
+    "object_repr": "Отклик на Главный специалист Отдела по работе с юридическими лицами",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-11-26T02:02:15.874Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "1",
+    "object_repr": "Отклик на Менеджер Управления кредитного администрирования проектов Филиальной сети",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-11-26T02:02:30.897Z",
+    "user": [
+      "root"
+    ],
+    "content_type": [
+      "main",
+      "response"
+    ],
+    "object_id": "7",
+    "object_repr": "Отклик на Менеджер Управления кредитного администрирования проектов Филиальной сети",
+    "action_flag": 3,
+    "change_message": ""
   }
 }
 ]
