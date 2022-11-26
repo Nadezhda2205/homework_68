@@ -53,7 +53,7 @@ class VacancyListView(ListView):
         return queryset
 
 
-class VacancyCreateView(CreateView):
+class VacancyCreateView(LoginRequiredMixin, CreateView):
     template_name = 'main/create_vacancy.html'
     model = Vacancy
     fields = [
@@ -72,6 +72,11 @@ class VacancyCreateView(CreateView):
         self.object.save()
 
         return super().form_valid(form)
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.role.name == 'работодатель':
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
 
 
 class VacancyDetailView(DetailView):
