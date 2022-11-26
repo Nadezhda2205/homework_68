@@ -112,7 +112,12 @@ def json_index(request, *args, **kwargs):
     if request.method == 'GET':
         search = request.GET.get('search')
         vacancies = Vacancy.objects.filter(name__icontains=search) if search else Vacancy.objects.all()
-        return JsonResponse(list(vacancies.values(*('id', 'name', 'salary'))), safe=False)
+        response = JsonResponse(list(vacancies.values(*('id', 'name', 'salary'))), safe=False)
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+        response["Access-Control-Max-Age"] = "1000"
+        response["Access-Control-Allow-Headers"] = "X-Requested-With, Content-Type"
+        return response
     return JsonResponse({"data": "ничего не найдено"})
 
 
