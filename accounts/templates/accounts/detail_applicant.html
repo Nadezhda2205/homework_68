@@ -142,6 +142,9 @@
               <a class="me-5"href="{% url 'account_detail' response.vacancy.author.username %}">
                 {{ response.vacancy.author.name }}
               </a>
+              <a class="me-5"href="{% url 'vacancy_detail' response.vacancy.pk %}">
+                {{ response.vacancy.name }}
+              </a>
               <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
                 Чат
               </a>

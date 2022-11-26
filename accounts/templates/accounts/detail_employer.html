@@ -103,6 +103,9 @@
             <a class="me-5"href="{% url 'account_detail' response.resume.author.username %}">
               {{ response.resume.author.name }}
             </a>
+            <a class="me-5"href="{% url 'detail_resume' response.resume.pk %}">
+              {{ response.resume.name }}
+            </a>
             <a class="btn btn-secondary btn-sm ms-5 chat" id="{{ response.pk }}" data-bs-toggle="modal" data-bs-target="#messagesModal" href="">
               Чат
             </a>
